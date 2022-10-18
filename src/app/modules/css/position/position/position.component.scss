@@ -1,0 +1,49 @@
+// the default position is static. that means all the elements follow the other elements in the document flow
+
+.parent {
+  background-color: blue;
+  //   height: 120px;
+  height: 200vh;
+  position: relative;
+}
+
+.child {
+  height: 60px;
+  &-one {
+    //*** The RELATIVE position is the same as static but allows us to set LEFT, RIGHT, TOP, BOTTOM
+    //*** it moves the element from its palce in document flow  and overflow other elements but keep the initial space available
+    // position: relative;
+    // left: 10px;
+    // top:10px;
+
+    //*** The ABSOLUTE position completly remove the elements from the DOM flow and all the other elements keeps their flow
+    //*** the DOM acts as the elements does not exist
+    //*** it is important if you want to stick an element to a specific position without other elements position changed
+    // position: absolute;
+    //*** this will move the element to the 0 top position related to the first relative parent
+    //*** if this relative parent does not exist, it wil be placed in the top of the html element
+    //*** if parent position is set to RELATIVE , then the 0 position will be related to the parent
+    // top: 0;
+
+    //*** The FIXED position is the same as ABSOLUTE position but in this case its position is related to the DOM
+    //*** usefull with scroll if yoou want to stick the element position
+    //*** set parent HEIGHT to 200vh to see that when you scroll down, the element with FIXED position remains in the same position
+    // position: fixed;
+    // top: 0;
+
+    //*** The STICKY position is a combination between RELATIVE position and FIXED 
+    //*** it acts as a relative as long as the element dows not reach the top of the page when scroll down
+    //*** when the element reaches the top of the page, it becames FIXED
+    position: sticky;
+    top: 0;
+
+
+    background-color: red;
+  }
+  &-two {
+    background-color: yellow;
+  }
+  &-three {
+    background-color: gray;
+  }
+}
