@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { DisplayComponent } from './modules/css/display/display.component';
-import { PositionComponent } from './modules/css/position/position/position.component';
+import { PositionComponent } from './modules/css/position/position.component';
 
 const routes: Routes = [
   {
