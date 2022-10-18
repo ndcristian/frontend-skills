@@ -1,0 +1,101 @@
+//https://www.youtube.com/watch?v=Qf-wVa9y9V4
+
+.part-1 {
+  margin-bottom: 50px;
+}
+
+#img {
+  width: 50px;
+  height: 50px;
+}
+
+#span-1 {
+  //*** The default display prop for SPAN is INLINE. Thar means it will take only the space that it needs
+  //*** INLINE is not affected by height and width set explicitly
+  font-size: 20px;
+  background-color: bisque;
+  //*** this will not take effect because the default display is INLINE
+  height: 400px;
+  width: 500ps;
+}
+#span-2 {
+  font-size: 20px;
+  background-color: blueviolet;
+}
+#div-1 {
+  //*** The default display prop for DIV is BLOCK. That means it will takes the entire space available
+  font-size: 20px;
+  background-color: cadetblue;
+}
+#div-2 {
+  font-size: 20px;
+  background-color: steelblue;
+  //*** the element is removed from DOM as it never existed
+  display: none;
+}
+
+//*** DISPLAY FLEX
+
+.flexbox-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  //*** display all divs inside in center related to Main-Axis
+  //*** (in FLEX-DIRECTION=row this is horizontal, FLEX-DIRECTION=column this is vertical)
+  justify-content: center;
+  //*** aligns divs after Cross-Avies and take into account the MIN-WIDTH property
+  //*** (in FLEX-DIRECTION=row this is vertical, FLEX-DIRECTION=column this is horizontal)
+  align-items: center;
+
+  //*** Take effect only when we have multiple lines. Is about how to allign elements if window is resized
+  //*** to test this put FLEX-WRAP:WRAP to the flexbox-container and resize the window
+  align-content: center;
+
+  background-color: yellow;
+}
+
+.flexbox-item {
+  width: 200px;
+  margin: 10px;
+  border: 3px solid #333;
+  background-color: #dfdfdf;
+}
+.flexbox-item1 {
+  min-height: 100px;
+  //*** Means that this div will not be resized when we resize the window
+  flex-shrink: 0;
+  //*** allign only this element to end and apply the min-height property
+  align-self: flex-end;
+  //*** rearange the element in parent div
+  //   order: 3;
+
+  //*** A short way to set 
+  ///*** FLEX-GROW FLEX-SHRINK FLEX-BASIS in the exact this order
+  //flex:1 0 0px;
+}
+
+.flexbox-item2 {
+  min-height: 200px;
+  //*** define how much space from the empty space in line is taken by this div
+  flex-grow: 2;
+  //*** this will overwrite the the WIDTH prperty set in .flexbox-item
+  //*** and take the remaining space without taking into account the width set before
+  flex-basis: 0;
+
+  //*** allign only this element to center and apply the min-height property
+  align-self: center;
+
+  //   order: 1;
+}
+
+.flexbox-item3 {
+  min-height: 300px;
+  //*** define how much space from the empty space in line is taken by this div
+  //*** if equal with other one , that means they take half from the remaining space
+  //*** if equal with 2 , that means this div will take twice more space  that the previous one
+  flex-grow: 1;
+
+  flex-basis: 0;
+
+  //   order: 2;
+}
