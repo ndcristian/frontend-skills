@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { PositionComponent } from './modules/css/position/position.component';
 import { DisplayComponent } from './modules/css/display/display.component';
 import { BeforeAfterComponent } from './modules/html/before-after/before-after.component';
+import { NgClassComponent } from './modules/angular/ng-class/ng-class.component';
+import { NgStyleComponent } from './modules/angular/ng-style/ng-style.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PositionComponent,
     DisplayComponent,
-    BeforeAfterComponent
+    BeforeAfterComponent,
+    NgClassComponent,
+    NgStyleComponent
   ],
   imports: [
     BrowserModule,
