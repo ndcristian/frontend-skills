@@ -7,6 +7,7 @@ import { NgStyleComponent } from './modules/angular/ng-style/ng-style.component'
 import { DisplayComponent } from './modules/css/display/display.component';
 import { PositionComponent } from './modules/css/position/position.component';
 import { BeforeAfterComponent } from './modules/html/before-after/before-after.component';
+import { ObservableComponent } from './modules/rxjs/observable/observable.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path:'html/before-after',
     component:BeforeAfterComponent
+  },
+  {
+    path:'rxjs/observable',
+    component:ObservableComponent
   },
   {
     path:'ng/ngclass',
