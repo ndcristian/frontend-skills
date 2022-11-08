@@ -1,0 +1,5 @@
+<div class="defaultDivCss" *ngIf="condtion; else otherDiv">Div 1</div>
+<ng-template #otherDiv>
+    <div  class="defaultDivCss" [ngStyle]="{'color':'green'}">Div 2 </div>
+</ng-template>
+

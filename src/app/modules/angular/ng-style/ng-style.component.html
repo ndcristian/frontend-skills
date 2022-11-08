@@ -1,1 +1,4 @@
-<p>ng-style works!</p>
+<div class="defaultDivCss" [style.color]="'red'">Div 1</div>
+<div class="defaultDivCss" [ngStyle]="{'color':'green'}">Div 2 </div>
+<div class="defaultDivCss" [ngStyle]="getStyle()">Div 3</div>
+<div></div>

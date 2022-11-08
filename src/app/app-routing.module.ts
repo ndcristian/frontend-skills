@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NgClassComponent } from './modules/angular/ng-class/ng-class.component';
+import { NgContainerComponent } from './modules/angular/ng-container/ng-container.component';
+import { NgIfComponent } from './modules/angular/ng-if/ng-if.component';
 import { NgStyleComponent } from './modules/angular/ng-style/ng-style.component';
+import { PipeDefaultComponent } from './modules/angular/pipe-default/pipe-default.component';
 import { DisplayComponent } from './modules/css/display/display.component';
 import { PositionComponent } from './modules/css/position/position.component';
 import { BeforeAfterComponent } from './modules/html/before-after/before-after.component';
@@ -38,7 +41,19 @@ const routes: Routes = [
   {
     path:'ng/ngstyle',
     component:NgStyleComponent
-  }
+  },
+  {
+    path:'ng/if',
+    component:NgIfComponent
+  },
+  {
+    path:'ng/container',
+    component:NgContainerComponent
+  },
+  {
+    path:'ng/pipe',
+    component:PipeDefaultComponent
+  },
 
 ]
 @NgModule({

@@ -1,0 +1,17 @@
+
+<div class="main-div">
+    <div class="column-div"> DATA : {{c_date | date: 'dd:MM:yyyy'}} // {{c_date | date: 'dd:MMM:yyyy'}} <br>
+        {{string_ex | titlecase}} //  {{string_ex | uppercase}}
+        <div class="defaultDivCss" *ngFor="let p of person">{{p.name }}</div>
+    </div>
+    <div class="column-div">{{number_ex | number:'3.3-5'}} <br>
+        {{number_ex | currency:'EUR'}} <br>
+        {{pertage_ex | percent}}
+        <div class="defaultDivCss" *ngFor="let p of person | slice:fromIndex:toIndex">{{p.name }}</div>
+    </div>
+    <div class="column-div">
+        <div class="defaultDivCss" *ngFor="let p of person[0] | keyvalue">{{p.key + ':' + p.value}}</div>
+    </div>
+</div>
+
+<!-- 3.3-5 3= max number of integers, 3-5 min and max number of digists -->

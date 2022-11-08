@@ -1,0 +1,17 @@
+.defaultDivCss {
+    height: 50px;
+    width: 200px;
+    margin: 5px;
+    border: 1px solid red;
+}
+
+.main-div {
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.column-div {
+    width: 30%;
+    border: 1px solid grey;
+}

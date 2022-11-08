@@ -9,6 +9,9 @@ import { BeforeAfterComponent } from './modules/html/before-after/before-after.c
 import { ObservableComponent } from './modules/rxjs/observable/observable.component';
 import { NgClassComponent } from './modules/angular/ng-class/ng-class.component';
 import { NgStyleComponent } from './modules/angular/ng-style/ng-style.component';
+import { NgIfComponent } from './modules/angular/ng-if/ng-if.component';
+import { NgContainerComponent } from './modules/angular/ng-container/ng-container.component';
+import { PipeDefaultComponent } from './modules/angular/pipe-default/pipe-default.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { NgStyleComponent } from './modules/angular/ng-style/ng-style.component'
     BeforeAfterComponent,
     ObservableComponent,
     NgClassComponent,
-    NgStyleComponent
+    NgStyleComponent,
+    NgIfComponent,
+    NgContainerComponent,
+    PipeDefaultComponent
   ],
   imports: [
     BrowserModule,
