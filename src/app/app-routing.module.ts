@@ -7,6 +7,7 @@ import { NgContainerComponent } from './modules/angular/ng-container/ng-containe
 import { NgIfComponent } from './modules/angular/ng-if/ng-if.component';
 import { NgStyleComponent } from './modules/angular/ng-style/ng-style.component';
 import { PipeDefaultComponent } from './modules/angular/pipe-default/pipe-default.component';
+import { ViewChildComponent } from './modules/angular/view-child/view-child.component';
 import { DisplayComponent } from './modules/css/display/display.component';
 import { PositionComponent } from './modules/css/position/position.component';
 import { BeforeAfterComponent } from './modules/html/before-after/before-after.component';
@@ -53,6 +54,10 @@ const routes: Routes = [
   {
     path:'ng/pipe',
     component:PipeDefaultComponent
+  },
+  {
+    path:'ng/view-child',
+    component:ViewChildComponent
   },
 
 ]

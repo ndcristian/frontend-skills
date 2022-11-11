@@ -1,0 +1,16 @@
+<div class="main-wrapper" #mainWrapper>
+  <app-content-card defaultTitle="No content"></app-content-card>
+  <app-content-card defaultTitle="No Title"></app-content-card>
+  <app-content-card
+    defaultTitle="For view DOM elemnt of the card"
+    #contentElement
+  ></app-content-card>
+  <app-default-button #btn title="Print to console" (clickEvt)="handleClickBtn()"></app-default-button>
+</div>
+<app-default-button title="Add New Title" (clickEvt)="addNewTitle()"></app-default-button>
+<div class="main-wrapper">
+  <app-content-card #listCards
+    *ngFor="let title of titleList; let i = index"
+    [defaultTitle]="title"
+  ></app-content-card>
+</div>
