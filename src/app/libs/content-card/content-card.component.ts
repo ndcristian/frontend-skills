@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ContentCardComponent implements OnInit {
 
-  @Input() defaultTitle:string;
+  @Input() title:string;
 
   constructor() { }
 

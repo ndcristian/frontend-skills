@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NgClassComponent } from './modules/angular/ng-class/ng-class.component';
 import { NgContainerComponent } from './modules/angular/ng-container/ng-container.component';
+import { NgContentComponent } from './modules/angular/ng-content/ng-content.component';
 import { NgIfComponent } from './modules/angular/ng-if/ng-if.component';
 import { NgStyleComponent } from './modules/angular/ng-style/ng-style.component';
 import { PipeDefaultComponent } from './modules/angular/pipe-default/pipe-default.component';
@@ -58,6 +59,10 @@ const routes: Routes = [
   {
     path:'ng/view-child',
     component:ViewChildComponent
+  },
+  {
+    path:'ng/view-content',
+    component:NgContentComponent
   },
 
 ]

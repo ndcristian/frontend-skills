@@ -1,5 +1,13 @@
 <div class="content-card-wrapper">
     <div>
-      {{defaultTitle}}
+      {{title}}
+    </div>
+    <div>
+      <!-- <ng-content></ng-content> -->
+      <!-- partial projection project only the selected class-->
+      <!-- can be projected as class , as element  -->
+      <ng-content select = ".card-info-partial-projection"></ng-content>
+      <ng-content select = ".card-info-partial-multi-projection"></ng-content>
     </div>
 </div>
+

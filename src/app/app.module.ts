@@ -15,6 +15,7 @@ import { PipeDefaultComponent } from './modules/angular/pipe-default/pipe-defaul
 import { ViewChildComponent } from './modules/angular/view-child/view-child.component';
 import { ContentCardComponent } from './libs/content-card/content-card.component';
 import { DefaultButtonComponent } from './libs/default-button/default-button.component';
+import { NgContentComponent } from './modules/angular/ng-content/ng-content.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DefaultButtonComponent } from './libs/default-button/default-button.com
     PipeDefaultComponent,
     ViewChildComponent,
     ContentCardComponent,
-    DefaultButtonComponent
+    DefaultButtonComponent,
+    NgContentComponent
   ],
   imports: [
     BrowserModule,
