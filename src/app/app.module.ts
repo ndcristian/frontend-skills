@@ -16,6 +16,7 @@ import { ViewChildComponent } from './modules/angular/view-child/view-child.comp
 import { ContentCardComponent } from './libs/content-card/content-card.component';
 import { DefaultButtonComponent } from './libs/default-button/default-button.component';
 import { NgContentComponent } from './modules/angular/ng-content/ng-content.component';
+import { ViewContentComponent } from './modules/angular/view-content/view-content.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { NgContentComponent } from './modules/angular/ng-content/ng-content.comp
     ViewChildComponent,
     ContentCardComponent,
     DefaultButtonComponent,
-    NgContentComponent
+    NgContentComponent,
+    ViewContentComponent
   ],
   imports: [
     BrowserModule,

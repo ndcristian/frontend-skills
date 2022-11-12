@@ -9,6 +9,7 @@ import { NgIfComponent } from './modules/angular/ng-if/ng-if.component';
 import { NgStyleComponent } from './modules/angular/ng-style/ng-style.component';
 import { PipeDefaultComponent } from './modules/angular/pipe-default/pipe-default.component';
 import { ViewChildComponent } from './modules/angular/view-child/view-child.component';
+import { ViewContentComponent } from './modules/angular/view-content/view-content.component';
 import { DisplayComponent } from './modules/css/display/display.component';
 import { PositionComponent } from './modules/css/position/position.component';
 import { BeforeAfterComponent } from './modules/html/before-after/before-after.component';
@@ -61,8 +62,12 @@ const routes: Routes = [
     component:ViewChildComponent
   },
   {
-    path:'ng/view-content',
+    path:'ng/content',
     component:NgContentComponent
+  },
+  {
+    path:'ng/view-content',
+    component:ViewContentComponent
   },
 
 ]
