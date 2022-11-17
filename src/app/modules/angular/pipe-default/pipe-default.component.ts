@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { person } from '../../model/person';
+import { person } from '../../../model/person';
 
 @Component({
   selector: 'app-pipe-default',
