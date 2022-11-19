@@ -17,6 +17,9 @@ import { ContentCardComponent } from './libs/content-card/content-card.component
 import { DefaultButtonComponent } from './libs/default-button/default-button.component';
 import { NgContentComponent } from './modules/angular/ng-content/ng-content.component';
 import { ViewContentComponent } from './modules/angular/view-content/view-content.component';
+import { SpecificTypesComponent } from './modules/typescript/specific-types/specific-types.component';
+import { WsComponent } from './modules/websocket/ws/ws.component';
+import { WsService } from './modules/websocket/ws.service';
 
 @NgModule({
   declarations: [
@@ -34,13 +37,15 @@ import { ViewContentComponent } from './modules/angular/view-content/view-conten
     ContentCardComponent,
     DefaultButtonComponent,
     NgContentComponent,
-    ViewContentComponent
+    ViewContentComponent,
+    SpecificTypesComponent,
+    WsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [WsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

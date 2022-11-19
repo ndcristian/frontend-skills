@@ -14,6 +14,8 @@ import { DisplayComponent } from './modules/css/display/display.component';
 import { PositionComponent } from './modules/css/position/position.component';
 import { BeforeAfterComponent } from './modules/html/before-after/before-after.component';
 import { ObservableComponent } from './modules/rxjs/observable/observable.component';
+import { SpecificTypesComponent } from './modules/typescript/specific-types/specific-types.component';
+import { WsComponent } from './modules/websocket/ws/ws.component';
 
 
 const routes: Routes = [
@@ -68,6 +70,14 @@ const routes: Routes = [
   {
     path:'ng/view-content',
     component:ViewContentComponent
+  },
+  {
+    path:'ts/types',
+    component:SpecificTypesComponent
+  },
+  {
+    path:'ws/check',
+    component:WsComponent
   },
 
 ]
