@@ -7,6 +7,7 @@ import { NgContainerComponent } from './modules/angular/ng-container/ng-containe
 import { NgContentComponent } from './modules/angular/ng-content/ng-content.component';
 import { NgIfComponent } from './modules/angular/ng-if/ng-if.component';
 import { NgStyleComponent } from './modules/angular/ng-style/ng-style.component';
+import { NgTemplateComponent } from './modules/angular/ng-template/ng-template.component';
 import { PipeDefaultComponent } from './modules/angular/pipe-default/pipe-default.component';
 import { ViewChildComponent } from './modules/angular/view-child/view-child.component';
 import { ViewContentComponent } from './modules/angular/view-content/view-content.component';
@@ -72,6 +73,10 @@ const routes: Routes = [
     component:ViewContentComponent
   },
   {
+    path:'ng/template',
+    component:NgTemplateComponent
+  },
+  {
     path:'ts/types',
     component:SpecificTypesComponent
   },
@@ -79,6 +84,7 @@ const routes: Routes = [
     path:'ws/check',
     component:WsComponent
   },
+
 
 ]
 @NgModule({

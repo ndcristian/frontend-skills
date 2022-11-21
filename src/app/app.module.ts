@@ -20,6 +20,8 @@ import { ViewContentComponent } from './modules/angular/view-content/view-conten
 import { SpecificTypesComponent } from './modules/typescript/specific-types/specific-types.component';
 import { WsComponent } from './modules/websocket/ws/ws.component';
 import { WsService } from './modules/websocket/ws.service';
+import { NgTemplateComponent } from './modules/angular/ng-template/ng-template.component';
+import { SidebarComponent } from './libs/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { WsService } from './modules/websocket/ws.service';
     NgContentComponent,
     ViewContentComponent,
     SpecificTypesComponent,
-    WsComponent
+    WsComponent,
+    NgTemplateComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
