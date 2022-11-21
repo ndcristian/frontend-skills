@@ -2,6 +2,11 @@
   position: relative;
 }
 
+//::befor , ::after are included in  the element related to
+// are pseudo elements and they do not work on images
+// must have the content property
+// the contetn can be '' ampty
+
 .save-btn::after {
   content: '\2022';
   left: 16px;
