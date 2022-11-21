@@ -1,14 +1,25 @@
 <div class="template-main" *ngIf="title as compName">
+  <!-- gine the template its own context variale templateName ans assign it in the templateOutlet context -->
+  <ng-template #templateDiv let-templateName="titleName">
+    <div>{{ templateName }}--template</div>
+    
+  </ng-template>
 
-    <!-- gine the template its own context variale templateName ans assign it in the templateOutlet context -->
-    <ng-template #templateDiv let-templateName="titleName">
-        {{templateName}}
-    </ng-template>
-
-<!-- here we instantiate the tem[plate , give it an context to make 
+  <!-- here we instantiate the tem[plate , give it an context to make 
     templateNmae variable visible in the template context -->
-<div *ngTemplateOutlet="templateDiv; context:{titleName:compName}"> </div> <br>
-<div *ngTemplateOutlet="templateDiv; context:{titleName:compName}"> </div> <br>
-<ng-container *ngTemplateOutlet="templateDiv; context:{titleName:compName + '-container'}"> </ng-container> <br>
+  <div *ngTemplateOutlet="templateDiv; context: { titleName: compName }"></div>
+  <br />
+  <div *ngTemplateOutlet="templateDiv; context: { titleName: compName }"></div>
+  <br />
+  <ng-container
+    *ngTemplateOutlet="
+      templateDiv;
+      context: { titleName: compName + '-container' }
+    "
+  >
+  </ng-container>
+  <br />
+  <br />
 
+  <app-sidebar [templateImput]="templateDiv" [text]="compName"> </app-sidebar>
 </div>
