@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { NgDirectivesTestComponent } from './modules/angular/directives/ng-directives-test/ng-directives-test.component';
 import { NgClassComponent } from './modules/angular/ng-class/ng-class.component';
 import { NgContainerComponent } from './modules/angular/ng-container/ng-container.component';
 import { NgContentComponent } from './modules/angular/ng-content/ng-content.component';
@@ -83,6 +84,10 @@ const routes: Routes = [
   {
     path:'ws/check',
     component:WsComponent
+  },
+  {
+    path:'ng/directives',
+    component:NgDirectivesTestComponent
   },
 
 
