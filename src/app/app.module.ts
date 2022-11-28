@@ -22,6 +22,8 @@ import { WsComponent } from './modules/websocket/ws/ws.component';
 import { WsService } from './modules/websocket/ws.service';
 import { NgTemplateComponent } from './modules/angular/ng-template/ng-template.component';
 import { SidebarComponent } from './libs/sidebar/sidebar.component';
+import { NgDirectivesDirective } from './modules/angular/directives/ng-directives.directive';
+import { NgDirectivesTestComponent } from './modules/angular/directives/ng-directives-test/ng-directives-test.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { SidebarComponent } from './libs/sidebar/sidebar.component';
     SpecificTypesComponent,
     WsComponent,
     NgTemplateComponent,
-    SidebarComponent
+    SidebarComponent,
+    NgDirectivesDirective,
+    NgDirectivesTestComponent
   ],
   imports: [
     BrowserModule,
