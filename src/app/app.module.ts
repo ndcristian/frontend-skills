@@ -26,6 +26,7 @@ import { SidebarComponent } from './libs/sidebar/sidebar.component';
 import { NgDirectivesDirective } from './modules/angular/directives/ng-directives.directive';
 import { NgDirectivesTestComponent } from './modules/angular/directives/ng-directives-test/ng-directives-test.component';
 import { TwoWayBindingComponent } from './modules/angular/two-way-binding/two-way-binding.component';
+import { GenericInputComponent } from './modules/html/generic-input/generic-input.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { TwoWayBindingComponent } from './modules/angular/two-way-binding/two-wa
     SidebarComponent,
     NgDirectivesDirective,
     NgDirectivesTestComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    GenericInputComponent
   ],
   imports: [
     FormsModule,

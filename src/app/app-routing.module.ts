@@ -16,6 +16,7 @@ import { ViewContentComponent } from './modules/angular/view-content/view-conten
 import { DisplayComponent } from './modules/css/display/display.component';
 import { PositionComponent } from './modules/css/position/position.component';
 import { BeforeAfterComponent } from './modules/html/before-after/before-after.component';
+import { GenericInputComponent } from './modules/html/generic-input/generic-input.component';
 import { ObservableComponent } from './modules/rxjs/observable/observable.component';
 import { SpecificTypesComponent } from './modules/typescript/specific-types/specific-types.component';
 import { WsComponent } from './modules/websocket/ws/ws.component';
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path:'html/before-after',
     component:BeforeAfterComponent
+  },
+  {
+    path:'html/input',
+    component:GenericInputComponent
   },
   {
     path:'rxjs/observable',
