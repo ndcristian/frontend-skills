@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +25,7 @@ import { NgTemplateComponent } from './modules/angular/ng-template/ng-template.c
 import { SidebarComponent } from './libs/sidebar/sidebar.component';
 import { NgDirectivesDirective } from './modules/angular/directives/ng-directives.directive';
 import { NgDirectivesTestComponent } from './modules/angular/directives/ng-directives-test/ng-directives-test.component';
+import { TwoWayBindingComponent } from './modules/angular/two-way-binding/two-way-binding.component';
 
 @NgModule({
   declarations: [
@@ -47,9 +49,11 @@ import { NgDirectivesTestComponent } from './modules/angular/directives/ng-direc
     NgTemplateComponent,
     SidebarComponent,
     NgDirectivesDirective,
-    NgDirectivesTestComponent
+    NgDirectivesTestComponent,
+    TwoWayBindingComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule
   ],
