@@ -28,6 +28,8 @@ import { NgDirectivesTestComponent } from './modules/angular/directives/ng-direc
 import { TwoWayBindingComponent } from './modules/angular/two-way-binding/two-way-binding.component';
 import { GenericInputComponent } from './modules/html/generic-input/generic-input.component';
 import { GenericFormComponent } from './modules/html/generic-form/generic-form.component';
+import { MainLayoutComponent } from './modules/html/main-layout/main-layout.component';
+import { HeaderBarComponent } from './modules/html/header-bar/header-bar.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { GenericFormComponent } from './modules/html/generic-form/generic-form.c
     NgDirectivesTestComponent,
     TwoWayBindingComponent,
     GenericInputComponent,
-    GenericFormComponent
+    GenericFormComponent,
+    MainLayoutComponent,
+    HeaderBarComponent
   ],
   imports: [
     FormsModule,
