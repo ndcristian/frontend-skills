@@ -10,11 +10,13 @@ import { NgIfComponent } from './modules/angular/ng-if/ng-if.component';
 import { NgStyleComponent } from './modules/angular/ng-style/ng-style.component';
 import { NgTemplateComponent } from './modules/angular/ng-template/ng-template.component';
 import { PipeDefaultComponent } from './modules/angular/pipe-default/pipe-default.component';
+import { TwoWayBindingComponent } from './modules/angular/two-way-binding/two-way-binding.component';
 import { ViewChildComponent } from './modules/angular/view-child/view-child.component';
 import { ViewContentComponent } from './modules/angular/view-content/view-content.component';
 import { DisplayComponent } from './modules/css/display/display.component';
 import { PositionComponent } from './modules/css/position/position.component';
 import { BeforeAfterComponent } from './modules/html/before-after/before-after.component';
+import { GenericInputComponent } from './modules/html/generic-input/generic-input.component';
 import { ObservableComponent } from './modules/rxjs/observable/observable.component';
 import { SpecificTypesComponent } from './modules/typescript/specific-types/specific-types.component';
 import { WsComponent } from './modules/websocket/ws/ws.component';
@@ -36,6 +38,10 @@ const routes: Routes = [
   {
     path:'html/before-after',
     component:BeforeAfterComponent
+  },
+  {
+    path:'html/input',
+    component:GenericInputComponent
   },
   {
     path:'rxjs/observable',
@@ -88,6 +94,10 @@ const routes: Routes = [
   {
     path:'ng/directives',
     component:NgDirectivesTestComponent
+  },
+  {
+    path:'ng/2way',
+    component:TwoWayBindingComponent
   },
 
 
