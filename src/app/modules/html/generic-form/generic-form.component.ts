@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-generic-form',
@@ -8,13 +8,23 @@ import { NgForm } from '@angular/forms';
 })
 export class GenericFormComponent implements OnInit {
 
-  constructor() { }
+  formData:{username?:string, password?:string} = {};
+
+  constructor(private router: Router,) { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(form: NgForm) {
-    console.log(form);
+  setFormValue(event, property){
+    console.log(event, property)
+    this.formData[property] = event;
+    console.log(this.formData)
+   
+  }
+
+  subbmit(){
+    console.log("SUBMIT")
+    this.router.navigate(['/html/layout', { message: this.formData.username }]);
   }
 
 }

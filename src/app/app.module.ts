@@ -30,6 +30,7 @@ import { GenericInputComponent } from './modules/html/generic-input/generic-inpu
 import { GenericFormComponent } from './modules/html/generic-form/generic-form.component';
 import { MainLayoutComponent } from './modules/html/main-layout/main-layout.component';
 import { HeaderBarComponent } from './modules/html/header-bar/header-bar.component';
+import { GenericButtonComponent } from './modules/html/generic-button/generic-button.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { HeaderBarComponent } from './modules/html/header-bar/header-bar.compone
     GenericInputComponent,
     GenericFormComponent,
     MainLayoutComponent,
-    HeaderBarComponent
+    HeaderBarComponent,
+    GenericButtonComponent
   ],
   imports: [
     FormsModule,

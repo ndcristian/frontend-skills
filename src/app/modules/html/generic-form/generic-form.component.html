@@ -1,8 +1,23 @@
-<form class="form-signin" (ngSubmit)="onSubmit(f)" #f="ngForm">
+<!-- <form class="form-signin" (ngSubmit)="onSubmit(f)" #f="ngForm"> -->
+<div class="form-signin">
   <!-- <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
   <h1 class="form-title">Please sign in</h1>
+
+  <app-generic-input
+    type="text"
+    placeholder="username"
+    name="username"
+    (emitInputValue)="setFormValue($event, 'username')"
+  ></app-generic-input>
+
+  <app-generic-input
+    type="password"
+    placeholder="password"
+    (emitInputValue)="setFormValue($event, 'password')"
+  ></app-generic-input>
+
   <!-- <label for="inputEmail" class="sr-only">Email address</label> -->
-  <input
+  <!-- <input
     type="email"
     id="inputEmail"
     name="username"
@@ -11,9 +26,9 @@
     required
     autofocus
     ngModel
-  />
+  /> -->
   <!-- <label for="inputPassword" class="sr-only">Password</label> -->
-  <input
+  <!-- <input
     type="password"
     id="inputPassword"
     name="password"
@@ -21,7 +36,8 @@
     placeholder="Password"
     required
     ngModel
-  />
+  /> -->
 
-  <button class="btn btn-lg btn-primary btn-block">Sign in</button>
-</form>
+  <app-generic-button name="Submit" (click)="subbmit()"> </app-generic-button>
+</div>
+<!-- </form> -->
