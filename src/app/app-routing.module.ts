@@ -19,6 +19,7 @@ import { BeforeAfterComponent } from './modules/html/before-after/before-after.c
 import { GenericFormComponent } from './modules/html/generic-form/generic-form.component';
 import { GenericInputComponent } from './modules/html/generic-input/generic-input.component';
 import { MainLayoutComponent } from './modules/html/main-layout/main-layout.component';
+import { NgTemplateFormComponent } from './modules/html/ng-template-form/ng-template-form.component';
 import { ObservableComponent } from './modules/rxjs/observable/observable.component';
 import { SpecificTypesComponent } from './modules/typescript/specific-types/specific-types.component';
 import { WsComponent } from './modules/websocket/ws/ws.component';
@@ -48,6 +49,10 @@ const routes: Routes = [
   {
     path:'html/form',
     component:GenericFormComponent
+  },
+  {
+    path:'html/template-form',
+    component:NgTemplateFormComponent
   },
   {
     path:'html/layout',

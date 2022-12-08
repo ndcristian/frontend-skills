@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +32,7 @@ import { GenericFormComponent } from './modules/html/generic-form/generic-form.c
 import { MainLayoutComponent } from './modules/html/main-layout/main-layout.component';
 import { HeaderBarComponent } from './modules/html/header-bar/header-bar.component';
 import { GenericButtonComponent } from './modules/html/generic-button/generic-button.component';
+import { NgTemplateFormComponent } from './modules/html/ng-template-form/ng-template-form.component';
 
 @NgModule({
   declarations: [
@@ -60,11 +62,13 @@ import { GenericButtonComponent } from './modules/html/generic-button/generic-bu
     GenericFormComponent,
     MainLayoutComponent,
     HeaderBarComponent,
-    GenericButtonComponent
+    GenericButtonComponent,
+    NgTemplateFormComponent
   ],
   imports: [
-    FormsModule,
     BrowserModule,
+    CommonModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [WsService],
