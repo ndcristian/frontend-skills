@@ -11,7 +11,7 @@ export class GenericInputComponent implements OnInit {
   @Input() placeholder:string;
   @Input() name:string;
 
-  @Output() emitInputValue= new EventEmitter<{nstring}>()
+  @Output() emitInputValue= new EventEmitter<{string}>()
 
   constructor() { }
 
