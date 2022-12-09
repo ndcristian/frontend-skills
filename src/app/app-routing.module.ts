@@ -21,6 +21,7 @@ import { GenericInputComponent } from './modules/html/generic-input/generic-inpu
 import { MainLayoutComponent } from './modules/html/main-layout/main-layout.component';
 import { NgTemplateFormComponent } from './modules/html/ng-template-form/ng-template-form.component';
 import { ObservableComponent } from './modules/rxjs/observable/observable.component';
+import { GenericTypeComponent } from './modules/ts/generic-type/generic-type.component';
 import { SpecificTypesComponent } from './modules/typescript/specific-types/specific-types.component';
 import { WsComponent } from './modules/websocket/ws/ws.component';
 
@@ -101,6 +102,10 @@ const routes: Routes = [
   {
     path:'ts/types',
     component:SpecificTypesComponent
+  },
+  {
+    path:'ts/generic',
+    component:GenericTypeComponent
   },
   {
     path:'ws/check',

@@ -33,6 +33,8 @@ import { MainLayoutComponent } from './modules/html/main-layout/main-layout.comp
 import { HeaderBarComponent } from './modules/html/header-bar/header-bar.component';
 import { GenericButtonComponent } from './modules/html/generic-button/generic-button.component';
 import { NgTemplateFormComponent } from './modules/html/ng-template-form/ng-template-form.component';
+import { GenericTypeComponent } from './modules/ts/generic-type/generic-type.component';
+import { AgularTypesComponent } from './modules/ts/agular-types/agular-types.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +65,9 @@ import { NgTemplateFormComponent } from './modules/html/ng-template-form/ng-temp
     MainLayoutComponent,
     HeaderBarComponent,
     GenericButtonComponent,
-    NgTemplateFormComponent
+    NgTemplateFormComponent,
+    GenericTypeComponent,
+    AgularTypesComponent
   ],
   imports: [
     BrowserModule,
