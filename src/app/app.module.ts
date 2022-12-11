@@ -35,6 +35,7 @@ import { GenericButtonComponent } from './modules/html/generic-button/generic-bu
 import { NgTemplateFormComponent } from './modules/html/ng-template-form/ng-template-form.component';
 import { GenericTypeComponent } from './modules/ts/generic-type/generic-type.component';
 import { AgularTypesComponent } from './modules/ts/agular-types/agular-types.component';
+import { EtxCalendarComponent } from './libs/etx-calendar/etx-calendar.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { AgularTypesComponent } from './modules/ts/agular-types/agular-types.com
     GenericButtonComponent,
     NgTemplateFormComponent,
     GenericTypeComponent,
-    AgularTypesComponent
+    AgularTypesComponent,
+    EtxCalendarComponent
   ],
   imports: [
     BrowserModule,

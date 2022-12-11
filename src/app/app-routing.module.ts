@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { EtxCalendarComponent } from './libs/etx-calendar/etx-calendar.component';
 import { NgDirectivesTestComponent } from './modules/angular/directives/ng-directives-test/ng-directives-test.component';
 import { NgClassComponent } from './modules/angular/ng-class/ng-class.component';
 import { NgContainerComponent } from './modules/angular/ng-container/ng-container.component';
@@ -58,6 +59,10 @@ const routes: Routes = [
   {
     path:'html/layout',
     component:MainLayoutComponent
+  },
+  {
+    path:'lib/calendar',
+    component:EtxCalendarComponent
   },
   {
     path:'rxjs/observable',
