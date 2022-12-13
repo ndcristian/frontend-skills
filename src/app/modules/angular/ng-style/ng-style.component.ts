@@ -10,6 +10,8 @@ export class NgStyleComponent implements OnInit {
 
   constructor() { }
 
+  condition:string = "test"
+
   ngOnInit(): void {
   }
   getStyle(){

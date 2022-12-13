@@ -24,6 +24,7 @@ type Combinable = string | number;
   styleUrls: ['./specific-types.component.scss'],
 })
 export class SpecificTypesComponent implements OnInit {
+  
   /* Tuples */
   role: [string, number];
 

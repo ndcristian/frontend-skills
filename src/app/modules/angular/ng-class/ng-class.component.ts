@@ -11,6 +11,8 @@ export class NgClassComponent implements OnInit {
 
   constructor() { }
 
+  condition : string = "text"
+
   ngOnInit(): void {
   }
 

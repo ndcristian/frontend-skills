@@ -65,7 +65,7 @@ const routes: Routes = [
         component:EtxCalendarComponent
       },
       {
-        path:'html/input',
+        path:'input',
         component:GenericInputComponent
       },
     ]
