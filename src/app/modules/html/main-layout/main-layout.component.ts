@@ -11,8 +11,8 @@ export class MainLayoutComponent implements OnInit {
 
   leftMenu: { name: string; url: string }[] = [
     { name: 'Calendar', url: '/calendar' },
-    { name: 'Input', url: 'html/input' },
-    { name: 'sss', url: 'asdf' },
+    { name: 'Input', url: '/input' },
+    { name: ':host', url: '/host' },
     { name: 'sss', url: 'asdf' },
     { name: 'sss', url: 'asdf' },
     { name: 'sss', url: 'asdf' },

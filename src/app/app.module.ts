@@ -37,6 +37,8 @@ import { GenericTypeComponent } from './modules/ts/generic-type/generic-type.com
 import { AgularTypesComponent } from './modules/ts/agular-types/agular-types.component';
 import { EtxCalendarComponent } from './libs/etx-calendar/etx-calendar.component';
 import { MenuCardComponent } from './modules/html/menu-card/menu-card.component';
+import { HostPseudoClassComponent } from './modules/angular/host-pseudo-class/host-pseudo-class.component';
+import { ChildComponentComponent } from './modules/angular/host-pseudo-class/child-component/child-component.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,9 @@ import { MenuCardComponent } from './modules/html/menu-card/menu-card.component'
     GenericTypeComponent,
     AgularTypesComponent,
     EtxCalendarComponent,
-    MenuCardComponent
+    MenuCardComponent,
+    HostPseudoClassComponent,
+    ChildComponentComponent
   ],
   imports: [
     BrowserModule,

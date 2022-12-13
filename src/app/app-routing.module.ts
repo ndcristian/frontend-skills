@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { EtxCalendarComponent } from './libs/etx-calendar/etx-calendar.component';
 import { NgDirectivesTestComponent } from './modules/angular/directives/ng-directives-test/ng-directives-test.component';
+import { HostPseudoClassComponent } from './modules/angular/host-pseudo-class/host-pseudo-class.component';
 import { NgClassComponent } from './modules/angular/ng-class/ng-class.component';
 import { NgContainerComponent } from './modules/angular/ng-container/ng-container.component';
 import { NgContentComponent } from './modules/angular/ng-content/ng-content.component';
@@ -67,6 +68,10 @@ const routes: Routes = [
       {
         path:'input',
         component:GenericInputComponent
+      },
+      {
+        path:'host',
+        component:HostPseudoClassComponent
       },
     ]
   },
