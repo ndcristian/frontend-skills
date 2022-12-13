@@ -58,12 +58,22 @@ const routes: Routes = [
   },
   {
     path:'html/layout',
-    component:MainLayoutComponent
+    component:MainLayoutComponent,
+    children: [
+      {
+        path:'calendar',
+        component:EtxCalendarComponent
+      },
+      {
+        path:'html/input',
+        component:GenericInputComponent
+      },
+    ]
   },
-  {
-    path:'lib/calendar',
-    component:EtxCalendarComponent
-  },
+  // {
+  //   path:'lib/calendar',
+  //   component:EtxCalendarComponent
+  // },
   {
     path:'rxjs/observable',
     component:ObservableComponent

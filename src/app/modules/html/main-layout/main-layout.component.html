@@ -4,8 +4,14 @@
   </div>
 
   <div class="main-body">
-    <div class="main-left-menu"></div>
-    <div class="main-content"></div>
+    <div class="main-left-menu">
+      <ng-container *ngFor="let menu of leftMenu">
+        <app-menu-card [url]="menu.url" [name]="menu.name" (evtClick)="onSelect($event)"></app-menu-card>
+    </ng-container>
+    </div>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 
   <div class="main-footer"></div>

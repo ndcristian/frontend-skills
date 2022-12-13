@@ -36,6 +36,7 @@ import { NgTemplateFormComponent } from './modules/html/ng-template-form/ng-temp
 import { GenericTypeComponent } from './modules/ts/generic-type/generic-type.component';
 import { AgularTypesComponent } from './modules/ts/agular-types/agular-types.component';
 import { EtxCalendarComponent } from './libs/etx-calendar/etx-calendar.component';
+import { MenuCardComponent } from './modules/html/menu-card/menu-card.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { EtxCalendarComponent } from './libs/etx-calendar/etx-calendar.component
     NgTemplateFormComponent,
     GenericTypeComponent,
     AgularTypesComponent,
-    EtxCalendarComponent
+    EtxCalendarComponent,
+    MenuCardComponent
   ],
   imports: [
     BrowserModule,

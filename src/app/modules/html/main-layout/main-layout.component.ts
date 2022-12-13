@@ -1,20 +1,40 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-layout',
   templateUrl: './main-layout.component.html',
-  styleUrls: ['./main-layout.component.scss']
+  styleUrls: ['./main-layout.component.scss'],
 })
 export class MainLayoutComponent implements OnInit {
+  user: string;
 
-  user:string
+  leftMenu: { name: string; url: string }[] = [
+    { name: 'Calendar', url: '/calendar' },
+    { name: 'Input', url: 'html/input' },
+    { name: 'sss', url: 'asdf' },
+    { name: 'sss', url: 'asdf' },
+    { name: 'sss', url: 'asdf' },
+    { name: 'sss', url: 'asdf' },
+    { name: 'sss', url: 'asdf' },
+    { name: 'sss', url: 'asdf' },
+    { name: 'sss', url: 'asdf' },
+    { name: 'sss', url: 'asdf' },
+    { name: 'sss', url: 'asdf' },
+    { name: 'sss', url: 'asdf' },
+    { name: 'sss', url: 'asdf' },
+    { name: 'sss', url: 'asdf' },
+    { name: 'sss', url: 'asdf' },
+  ];
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute, private route: Router) {}
 
   ngOnInit(): void {
     this.user = this.activatedRoute.snapshot.paramMap.get('message');
   }
 
+  onSelect(url: string) {
+    console.log(url);
+    this.route.navigate([`/html/layout/${url}`])
+  }
 }
