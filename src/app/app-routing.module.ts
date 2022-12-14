@@ -120,6 +120,10 @@ const routes: Routes = [
     component:NgTemplateComponent
   },
   {
+    path:'ng/host',
+    component:HostPseudoClassComponent
+  },
+  {
     path:'ts/types',
     component:SpecificTypesComponent
   },
