@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { CustomInputComponent } from './libs/custom-input/custom-input.component';
 import { EtxCalendarComponent } from './libs/etx-calendar/etx-calendar.component';
 import { NgDirectivesTestComponent } from './modules/angular/directives/ng-directives-test/ng-directives-test.component';
 import { HostPseudoClassComponent } from './modules/angular/host-pseudo-class/host-pseudo-class.component';
@@ -66,12 +67,16 @@ const routes: Routes = [
         component:EtxCalendarComponent
       },
       {
-        path:'input',
+        path:'input-geric',
         component:GenericInputComponent
       },
       {
         path:'host',
         component:HostPseudoClassComponent
+      },
+      {
+        path:'input-custom',
+        component:CustomInputComponent
       },
     ]
   },

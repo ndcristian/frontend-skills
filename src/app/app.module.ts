@@ -39,6 +39,7 @@ import { EtxCalendarComponent } from './libs/etx-calendar/etx-calendar.component
 import { MenuCardComponent } from './modules/html/menu-card/menu-card.component';
 import { HostPseudoClassComponent } from './modules/angular/host-pseudo-class/host-pseudo-class.component';
 import { ChildComponentComponent } from './modules/angular/host-pseudo-class/child-component/child-component.component';
+import { CustomInputComponent } from './libs/custom-input/custom-input.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { ChildComponentComponent } from './modules/angular/host-pseudo-class/chi
     EtxCalendarComponent,
     MenuCardComponent,
     HostPseudoClassComponent,
-    ChildComponentComponent
+    ChildComponentComponent,
+    CustomInputComponent
   ],
   imports: [
     BrowserModule,

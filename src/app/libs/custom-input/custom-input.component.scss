@@ -1,0 +1,30 @@
+.default-input {
+    padding: 8px;
+    margin:3px;
+    // border-radius:3px;
+    outline: none;
+}
+
+.default-input:focus {
+    outline: none;
+    // border: 1.2px solid #b1b0c9;
+}
+
+// .default-input:hover {
+//     box-shadow: 8px 3px 5px silver;
+// }
+
+label {
+    vertical-align: middle;
+}
+
+:host {
+    border: 1px solid grey;
+    padding: 8px;
+    margin:3px;
+    border-radius:3px;
+}   
+
+input {
+    border: none;
+}

@@ -13,7 +13,7 @@ export class MainLayoutComponent implements OnInit {
     { name: 'Calendar', url: '/calendar' },
     { name: 'Input', url: '/input' },
     { name: ':host', url: '/host' },
-    { name: 'sss', url: 'asdf' },
+    { name: 'input', url: '/input-custom' },
     { name: 'sss', url: 'asdf' },
     { name: 'sss', url: 'asdf' },
     { name: 'sss', url: 'asdf' },
