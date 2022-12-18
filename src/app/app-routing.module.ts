@@ -23,6 +23,7 @@ import { GenericFormComponent } from './modules/html/generic-form/generic-form.c
 import { GenericInputComponent } from './modules/html/generic-input/generic-input.component';
 import { MainLayoutComponent } from './modules/html/main-layout/main-layout.component';
 import { NgTemplateFormComponent } from './modules/html/ng-template-form/ng-template-form.component';
+import { EventHendlerComponent } from './modules/java-script/event-hendler/event-hendler.component';
 import { ObservableComponent } from './modules/rxjs/observable/observable.component';
 import { GenericTypeComponent } from './modules/ts/generic-type/generic-type.component';
 import { SpecificTypesComponent } from './modules/typescript/specific-types/specific-types.component';
@@ -78,12 +79,16 @@ const routes: Routes = [
         path:'input-custom',
         component:CustomInputComponent
       },
+      {
+        path:'ng-content',
+        component:NgContentComponent
+      },
+      {
+        path:'event-hendler',
+        component:EventHendlerComponent
+      },
     ]
   },
-  // {
-  //   path:'lib/calendar',
-  //   component:EtxCalendarComponent
-  // },
   {
     path:'rxjs/observable',
     component:ObservableComponent
@@ -111,10 +116,6 @@ const routes: Routes = [
   {
     path:'ng/view-child',
     component:ViewChildComponent
-  },
-  {
-    path:'ng/content',
-    component:NgContentComponent
   },
   {
     path:'ng/view-content',

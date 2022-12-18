@@ -40,6 +40,7 @@ import { MenuCardComponent } from './modules/html/menu-card/menu-card.component'
 import { HostPseudoClassComponent } from './modules/angular/host-pseudo-class/host-pseudo-class.component';
 import { ChildComponentComponent } from './modules/angular/host-pseudo-class/child-component/child-component.component';
 import { CustomInputComponent } from './libs/custom-input/custom-input.component';
+import { EventHendlerComponent } from './modules/java-script/event-hendler/event-hendler.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { CustomInputComponent } from './libs/custom-input/custom-input.component
     MenuCardComponent,
     HostPseudoClassComponent,
     ChildComponentComponent,
-    CustomInputComponent
+    CustomInputComponent,
+    EventHendlerComponent
   ],
   imports: [
     BrowserModule,
