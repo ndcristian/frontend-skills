@@ -1,0 +1,79 @@
+
+@import "../../css/dnd.scss";
+
+:host {
+  display: flex;
+  flex: 1 1 auto;
+
+  & .dragAndDrop {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include dnd();
+    
+
+    & .area {
+      min-height: 20px;
+      background-color: grey;
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+    }
+  }
+
+  .progress-bar {
+    ::ng-deep {
+      .progress-container {
+        &.inline {
+          & .progress-container-message-wrapper {
+            margin-right: 0 !important;
+          }
+        }
+      }
+    }
+  }
+
+  //In order to set border same as area width
+  .drop-zone-wrapper {
+    width: 100%;
+  }
+
+  .progress-bar-container {
+    display: flex;
+    align-items: center;
+    width: 70%;
+  }
+
+  .progress-bar-inner {
+    width: 100%;
+    margin-left: 8px;
+  }
+
+  .progress-bar-title {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .cancel-close {
+    text-align: end;
+    width: 70%;
+    margin-top: 0.5px;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+
+  .icon {
+    margin-right: -1.5px;
+  }
+
+  .upload-failed {
+    color: red;
+  }
+}

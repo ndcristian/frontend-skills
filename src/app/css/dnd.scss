@@ -1,0 +1,70 @@
+@mixin dnd() {
+    & .drop-zone {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+    
+        // &-title {
+        //   color: $zf-black-50;
+        //   font-size: $font-size_24;
+        //   line-height: $font-size_30;
+        //   font-family: $font-family-title;
+        //   margin-top: $spacing-2_2;
+        // }
+    
+        // &-subtitle {
+        //   color: $zf-black-50;
+        //   font-size: $font-size_14;
+        //   line-height: $font-size_16;
+        //   font-family: $font-family-title;
+        //   margin-top: $spacing-0_5;
+        // }
+    
+        &-show {
+          opacity: 1;
+        }
+    
+        &-inner {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: white;
+          opacity: 0.9;
+        }
+        &-wrapper {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          border: 0.2rem dashed cyan;
+          border-radius: 1rem;
+        }
+    
+        &-box {
+          color: cyan;
+          border: 0.2rem dashed black;
+          font-weight: bold;
+          border-radius: 1rem;
+          width: 4.5em;;
+          height: 4.5;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+}

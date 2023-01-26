@@ -1,0 +1,85 @@
+<div
+  class="dragAndDrop"
+  zfCsDnd
+  (fileDropped)="onFileDropped($event)"
+  [(fileOver)]="showDropzone"
+>
+  <div class="area" [style]="{ width: maxWidth, height: maxHeight }">
+    <ng-container *ngIf="!showDropzone">
+      <div #content>
+        <ng-content></ng-content>
+      </div>
+      <div *ngIf="!content.children.length">DRAG_HERE</div>
+    </ng-container>
+  </div>
+  <div class="drop-zone" [class.drop-zone-show]="showDropzone || isUploading">
+    <div class="drop-zone-inner">
+      <div
+        class="drop-zone-wrapper"
+        [style]="{ width: maxWidth, height: maxHeight }"
+      >
+        <ng-container *ngIf="isUploading">
+          <div class="progress-bar-container">
+            <etx-icon
+              [icon]="isFileUploadedFailed ? 'error-round' : 'doc-picture'"
+              [color]="isFileUploadedFailed ? 'error' : 'primary'"
+              size="large"
+            ></etx-icon>
+            <div class="progress-bar-inner">
+              <div
+                class="progress-bar-title"
+                [ngClass]="{
+                  'upload-failed': isFileUploadedFailed
+                }"
+              >
+                <div style="width: 125px" >{{ file?.name }}</div>
+                <div>
+                  <span *ngIf="!isFileUploadedFailed && uploadPercent < 100">
+                    {{ uploadPercent + "%" }}
+                  </span>
+                  <span *ngIf="!isFileUploadedFailed && uploadPercent == 100"
+                    >COMPLETE
+                    <etx-icon
+                      icon="check"
+                      color="info"
+                      size="medium"
+                    ></etx-icon>
+                  </span>
+                  <span *ngIf="isFileUploadedFailed"
+                    >UPLOAD_FAILED
+                    <etx-icon
+                      icon="error-round"
+                      color="error"
+                      size="large"
+                    ></etx-icon>
+                  </span>
+                </div>
+              </div>
+              <etx-progress-bar
+                class="progress-bar"
+                [progress]="uploadPercent"
+                [showPercentText]="false"
+                type="secondary"
+              ></etx-progress-bar>
+            </div>
+          </div>
+          <div class="primary cancel-close" (click)="cancelUpload()">
+            <span *ngIf="!isFileUploadedFailed && uploadPercent < 100">
+              CANCEL_UPLOAD
+            </span>
+            <span *ngIf="isFileUploadedFailed || uploadPercent == 100">
+              CLOSE
+            </span>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="!isUploading">
+          <div class="drop-zone-box">
+            <etx-icon icon="plus" color="primary"></etx-icon>
+          </div>
+          <div class="drop-zone-title">TITLE</div>
+          <div class="drop-zone-subtitle">DES}</div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
