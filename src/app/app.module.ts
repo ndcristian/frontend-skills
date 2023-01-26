@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -41,6 +43,10 @@ import { HostPseudoClassComponent } from './modules/angular/host-pseudo-class/ho
 import { ChildComponentComponent } from './modules/angular/host-pseudo-class/child-component/child-component.component';
 import { CustomInputComponent } from './libs/custom-input/custom-input.component';
 import { EventHendlerComponent } from './modules/java-script/event-hendler/event-hendler.component';
+import { DragDropFileUploaderComponent } from './libs/drag-drop-file-uploader/drag-drop-file-uploader.component';
+import { FileDndDirective } from './libs/directives/file-dnd.directive';
+import { IconComponent } from './libs/icon/icon.component';
+import { ProgressBarComponent } from './libs/progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -79,12 +85,19 @@ import { EventHendlerComponent } from './modules/java-script/event-hendler/event
     HostPseudoClassComponent,
     ChildComponentComponent,
     CustomInputComponent,
-    EventHendlerComponent
+    EventHendlerComponent,
+    DragDropFileUploaderComponent,
+    FileDndDirective,
+    IconComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [WsService],
