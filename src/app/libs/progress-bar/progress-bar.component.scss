@@ -1,0 +1,179 @@
+
+.progress-container {
+  flex-direction: row;
+  align-items: center;
+  width: inherit;
+  &.inline {
+    display: flex;
+    & .progress-container-message-wrapper {
+      margin-right: 2rem;
+    }
+  }
+  &-message-wrapper {
+    display: flex;
+    justify-content: space-between;
+    & > span {
+      display: flex;
+    }
+  }
+}
+
+.progress {
+  display: inline-block;
+  border-radius: 1.2rem;
+  height: 0.8rem;
+  position: relative;
+
+  width: 100%;
+
+  &-icon {
+    margin-right:0.5rem;
+    &.primary {
+      color: blue;
+    }
+
+    &.info {
+      color: blue;
+    }
+
+    &.error {
+      color: darkred;
+    }
+
+    &.warn {
+      color: darkgoldenrod;
+    }
+
+    &.success {
+      color: darkgreen;
+    }
+    &.secondary {
+      color: blue;
+    }
+  }
+
+  &-message {
+    &.primary {
+      color: blue;
+    }
+
+    &.info {
+      color: darkgray;
+    }
+
+    &.error {
+      color: darkred;
+    }
+
+    &.warn {
+      color: darkgoldenrod;
+    }
+
+    &.success {
+      color: darkgreen;
+    }
+    &.secondary {
+      color: blue;
+    }
+  }
+
+  &-percent {
+    font: 1.2rem;
+    &.inline {
+      margin-left: 3.6rem;
+    }
+
+    &.primary {
+      color: blue;
+    }
+
+    &.info {
+      color: blue;
+    }
+
+    &.error {
+      color: darkred;
+    }
+
+    &.warn {
+      color: darkgoldenrod;
+    }
+
+    &.success {
+      color: darkgreen;
+    }
+    &.secondary {
+      color: blue;
+    }
+  }
+
+  &.primary {
+    background-color:lightblue;
+  }
+
+  &.info {
+    background-color: blue;
+  }
+
+  &.error {
+    background-color: blue;
+  }
+
+  &.warn {
+    background-color: yellow;
+  }
+
+  &.success {
+    background-color: green;
+  }
+  &.secondary {
+    background-color: lightgrey;
+  }
+
+  &-bar {
+    display: inline-block;
+    position: absolute;
+    height: 0.8rem;
+    border-radius: 1.2rem;
+    transition: width 200ms;
+
+    &.primary {
+      background-color: blue;
+    }
+
+    &.info {
+      background-color: blue;
+    }
+
+    &.error {
+      background-color: darkred;
+    }
+
+    &.warn {
+      background-color: darkgoldenrod;
+    }
+
+    &.success {
+      background-color: darkgreen;
+    }
+    &.secondary {
+      background-color: blue;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+:host {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    height: 1rem;
+  }
+  
