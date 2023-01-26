@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CustomInputComponent } from './libs/custom-input/custom-input.component';
+import { DragDropFileUploaderComponent } from './libs/drag-drop-file-uploader/drag-drop-file-uploader.component';
 import { EtxCalendarComponent } from './libs/etx-calendar/etx-calendar.component';
+import { IconComponent } from './libs/icon/icon.component';
+import { ProgressBarComponent } from './libs/progress-bar/progress-bar.component';
 import { NgDirectivesTestComponent } from './modules/angular/directives/ng-directives-test/ng-directives-test.component';
 import { HostPseudoClassComponent } from './modules/angular/host-pseudo-class/host-pseudo-class.component';
 import { NgClassComponent } from './modules/angular/ng-class/ng-class.component';
@@ -86,6 +89,18 @@ const routes: Routes = [
       {
         path:'event-hendler',
         component:EventHendlerComponent
+      },
+      {
+        path:'progress-bar',
+        component:ProgressBarComponent
+      },
+      {
+        path:'icon',
+        component:IconComponent
+      },
+      {
+        path:'file-uploader',
+        component:DragDropFileUploaderComponent
       },
     ]
   },
