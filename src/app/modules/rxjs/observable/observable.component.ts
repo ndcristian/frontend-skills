@@ -2,7 +2,8 @@
 
 //to run: http://localhost:4200/#/rxjs/observable
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subscriber } from 'rxjs';
+import { person } from '../../../model/person';
 
 @Component({
   selector: 'app-observable',
@@ -10,9 +11,18 @@ import { Observable } from 'rxjs';
   styleUrls: ['./observable.component.scss'],
 })
 export class ObservableComponent implements OnInit {
+  data = ['unu', 'doi'];
+
   constructor() {}
 
   ngOnInit(): void {
+    
+    function subscribe(subscriber) {
+      for (let d of this.data) {
+        subscriber.next(d);
+      }
+    }
+
     const observable$ = new Observable<string>((subscriber) => {
       console.log('--Observable is executed');
       subscriber.next('Alice');
