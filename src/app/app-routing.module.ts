@@ -28,7 +28,7 @@ import { MainLayoutComponent } from './modules/html/main-layout/main-layout.comp
 import { NgTemplateFormComponent } from './modules/html/ng-template-form/ng-template-form.component';
 import { EventHendlerComponent } from './modules/java-script/event-hendler/event-hendler.component';
 import { ObservableComponent } from './modules/rxjs/observable/observable.component';
-import { GenericTypeComponent } from './modules/ts/generic-type/generic-type.component';
+import { GenericTypeComponent } from './modules/typescript/generic-type/generic-type.component';
 import { SpecificTypesComponent } from './modules/typescript/specific-types/specific-types.component';
 import { WsComponent } from './modules/websocket/ws/ws.component';
 

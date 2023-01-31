@@ -24,14 +24,13 @@ type Combinable = string | number;
   styleUrls: ['./specific-types.component.scss'],
 })
 export class SpecificTypesComponent implements OnInit {
-  
   /* Tuples */
   role: [string, number];
 
   /* Union Type */
   age: number | string;
   //or useing type defined above
-  age2:Combinable
+  age2: Combinable;
 
   /* Literal type */
   gender: 'male' | 'female';

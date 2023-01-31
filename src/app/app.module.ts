@@ -35,7 +35,7 @@ import { MainLayoutComponent } from './modules/html/main-layout/main-layout.comp
 import { HeaderBarComponent } from './modules/html/header-bar/header-bar.component';
 import { GenericButtonComponent } from './modules/html/generic-button/generic-button.component';
 import { NgTemplateFormComponent } from './modules/html/ng-template-form/ng-template-form.component';
-import { GenericTypeComponent } from './modules/ts/generic-type/generic-type.component';
+import { GenericTypeComponent } from './modules/typescript/generic-type/generic-type.component';
 import { AgularTypesComponent } from './modules/ts/agular-types/agular-types.component';
 import { EtxCalendarComponent } from './libs/etx-calendar/etx-calendar.component';
 import { MenuCardComponent } from './modules/html/menu-card/menu-card.component';
