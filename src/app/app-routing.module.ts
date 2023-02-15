@@ -112,6 +112,10 @@ const routes: Routes = [
         path:'arays',
         component:ArraysComponent
       },
+      {
+        path:'view-child',
+        component:ViewChildComponent
+      },
     ]
   },
  

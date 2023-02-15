@@ -23,6 +23,7 @@ export class ViewChildComponent implements OnInit, AfterViewInit {
   @ViewChild('btn') btn: DefaultButtonComponent;
   @ViewChild('mainWrapper') mainWrapper: ElementRef;
   @ViewChild('contentElement', { read: ElementRef }) contentElement: ElementRef;
+  @ViewChild('onecard', { read: ElementRef }) onecard: ElementRef;
 
   @ViewChildren('listCards') cardList: QueryList<ContentCardComponent>;
 
@@ -37,14 +38,19 @@ export class ViewChildComponent implements OnInit, AfterViewInit {
     this.cardList.changes.subscribe((newCard) => {
       console.log('New card title added: ', newCard);
     });
-    this.cardListAsDomElements.changes.subscribe((newCard) => {
+    this.cardListAsDomElements.changes.subscribe((newCard:ElementRef) => {
       console.log('New card title added as DOM element: ', newCard);
     });
+    this.onecard.nativeElement.querySelector('.div3').style.backgroundColor = 'yellow';
+    this.onecard.nativeElement.querySelector('.div3').classList.add('dedicated');
+    
+    console.log({oneCard:this.onecard.nativeElement.querySelector('.div3')});
   }
 
   ngOnInit(): void {
     console.log('From NG_ON_INIT');
     console.log(this.contentCard);
+    
   }
 
   handleClickBtn() {
@@ -52,7 +58,7 @@ export class ViewChildComponent implements OnInit, AfterViewInit {
     console.log(this.btn);
     console.log(this.mainWrapper);
     console.log(this.contentElement);
-    console.log(this.cardList);
+    console.log({cardList:this.cardList});
   }
 
   addNewTitle() {
