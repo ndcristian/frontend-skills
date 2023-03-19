@@ -43,6 +43,11 @@ export class StructuresOperatorsComponent implements OnInit {
     const { age: personAge, location: personLocation } = person;
     console.log(personAge, personLocation);
 
+    /*Destructuring strings */
+    const name = 'Cristi';
+    const [...arrName] = name;
+    console.log(arrName);
+
     /*
     SPREAD operator
     is on the RIGHT side of the equal =
