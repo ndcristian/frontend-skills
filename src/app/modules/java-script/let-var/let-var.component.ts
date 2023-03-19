@@ -11,5 +11,9 @@ export class LetVarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+/* 
+LET is block scope
+VAR is global scope BUT in STRICT-MODE is function scope
 
+*/
 }

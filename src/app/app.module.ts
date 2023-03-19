@@ -49,6 +49,7 @@ import { ProgressBarComponent } from './libs/progress-bar/progress-bar.component
 import { ThreeDotsMenuComponent } from './libs/three-dots-menu/three-dots-menu.component';
 import { ArraysComponent } from './modules/java-script/arrays/arrays.component';
 import { LetVarComponent } from './modules/java-script/let-var/let-var.component';
+import { StructuresOperatorsComponent } from './modules/java-script/structures-operators/structures-operators.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +95,8 @@ import { LetVarComponent } from './modules/java-script/let-var/let-var.component
     EventHendlerComponent,
     ThreeDotsMenuComponent,
     ArraysComponent,
-    LetVarComponent
+    LetVarComponent,
+    StructuresOperatorsComponent
   ],
   imports: [
     BrowserModule,
