@@ -50,6 +50,7 @@ import { ThreeDotsMenuComponent } from './libs/three-dots-menu/three-dots-menu.c
 import { ArraysComponent } from './modules/java-script/arrays/arrays.component';
 import { LetVarComponent } from './modules/java-script/let-var/let-var.component';
 import { StructuresOperatorsComponent } from './modules/java-script/structures-operators/structures-operators.component';
+import { ViewLayoutComponent } from './libs/view-layout/view-layout.component';
 
 @NgModule({
   declarations: [
@@ -96,7 +97,8 @@ import { StructuresOperatorsComponent } from './modules/java-script/structures-o
     ThreeDotsMenuComponent,
     ArraysComponent,
     LetVarComponent,
-    StructuresOperatorsComponent
+    StructuresOperatorsComponent,
+    ViewLayoutComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { EtxCalendarComponent } from './libs/etx-calendar/etx-calendar.component
 import { IconComponent } from './libs/icon/icon.component';
 import { ProgressBarComponent } from './libs/progress-bar/progress-bar.component';
 import { ThreeDotsMenuComponent } from './libs/three-dots-menu/three-dots-menu.component';
+import { ViewLayoutComponent } from './libs/view-layout/view-layout.component';
 import { NgDirectivesTestComponent } from './modules/angular/directives/ng-directives-test/ng-directives-test.component';
 import { HostPseudoClassComponent } from './modules/angular/host-pseudo-class/host-pseudo-class.component';
 import { NgClassComponent } from './modules/angular/ng-class/ng-class.component';
@@ -179,7 +180,10 @@ const routes: Routes = [
     path:'ng/2way',
     component:TwoWayBindingComponent
   },
-
+  {
+    path:'v',
+    component:ViewLayoutComponent
+  },
 
 ]
 @NgModule({
