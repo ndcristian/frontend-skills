@@ -48,6 +48,10 @@ export class StructuresOperatorsComponent implements OnInit {
     const [...arrName] = name;
     console.log(arrName);
 
+    //OR
+    const arrOfName = [..."Cristi"];
+    console.log(arrOfName);
+
     /*
     SPREAD operator
     is on the RIGHT side of the equal =
