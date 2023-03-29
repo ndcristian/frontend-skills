@@ -2,32 +2,18 @@ import { Component, HostListener, OnInit } from '@angular/core';
 
 type DisplayOptions = 'none' | 'hidden' | 'show';
 
+interface ViewOptions {
+  show: DisplayOptions;
+  width?: number;
+  collapsed?: boolean;
+}
+
 interface ViewLayoutConfig {
-  left: {
-    show: DisplayOptions;
-    width: number;
-    collapsed: boolean;
-  };
-  right: {
-    show: DisplayOptions;
-    width: number;
-    collapsed: boolean;
-  };
-  header: {
-    show: DisplayOptions;
-    width: number;
-    collapsed: boolean;
-  };
-  footer: {
-    show: DisplayOptions;
-    width: number;
-    collapsed: boolean;
-  };
-  body: {
-    show?: DisplayOptions;
-    width: number;
-    collapsed?: boolean;
-  };
+  left: ViewOptions;
+  right: ViewOptions;
+  header: ViewOptions;
+  footer: ViewOptions;
+  body: ViewOptions;
 }
 
 @Component({
@@ -58,6 +44,7 @@ export class ViewLayoutComponent implements OnInit {
       collapsed: false,
     },
     body: {
+      show:'show',
       width: 100,
     },
   };
