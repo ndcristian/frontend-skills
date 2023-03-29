@@ -1,10 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+
+type DisplayOptions = 'none' | 'hidden' | 'show';
 
 interface ViewLayoutConfig {
-  showLeft: 'none' | 'hiden' | 'show';
-  showRight: 'none' | 'hiden' | 'show';
-  showHeader: 'none' | 'hiden' | 'show';
-  showFooter: 'none' | 'hiden' | 'show';
+  left: {
+    show: DisplayOptions;
+    width: number;
+    collapsed: boolean;
+  };
+  right: {
+    show: DisplayOptions;
+    width: number;
+    collapsed: boolean;
+  };
+  header: {
+    show: DisplayOptions;
+    width: number;
+    collapsed: boolean;
+  };
+  footer: {
+    show: DisplayOptions;
+    width: number;
+    collapsed: boolean;
+  };
+  body: {
+    show?: DisplayOptions;
+    width: number;
+    collapsed?: boolean;
+  };
 }
 
 @Component({
@@ -14,13 +37,50 @@ interface ViewLayoutConfig {
 })
 export class ViewLayoutComponent implements OnInit {
   viewConfig: ViewLayoutConfig = {
-    showFooter: 'show',
-    showHeader: 'show',
-    showLeft:'show',
-    showRight:'none'
+    left: {
+      show: 'show',
+      width: 20,
+      collapsed: false,
+    },
+    right: {
+      show: 'show',
+      width: 10,
+      collapsed: false,
+    },
+    header: {
+      show: 'show',
+      width: 10,
+      collapsed: false,
+    },
+    footer: {
+      show: 'show',
+      width: 10,
+      collapsed: false,
+    },
+    body: {
+      width: 100,
+    },
   };
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    console.log('isMobile:', this.isMobile());
+  }
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('isMobile:', this.isMobile());
+  }
+
+  toggleLeft() {
+    this.viewConfig.left.width = this.viewConfig.left.collapsed
+      ? this.viewConfig.left.width * 1000
+      : this.viewConfig.left.width * 0.001;
+    this.viewConfig.left.collapsed = !this.viewConfig.left.collapsed;
+  }
+
+  public isMobile(): boolean {
+    return window.innerWidth < 767.98;
+  }
 }
