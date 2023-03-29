@@ -44,10 +44,11 @@ export class ViewLayoutComponent implements OnInit {
       collapsed: false,
     },
     body: {
-      show:'show',
+      show: 'show',
       width: 100,
     },
   };
+  toggle;
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
@@ -58,14 +59,20 @@ export class ViewLayoutComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('isMobile:', this.isMobile());
+    this.closeureFunct();
   }
 
-  toggleLeft() {
-    this.viewConfig.left.width = this.viewConfig.left.collapsed
-      ? this.viewConfig.left.width * 1000
-      : this.viewConfig.left.width * 0.001;
-    this.viewConfig.left.collapsed = !this.viewConfig.left.collapsed;
+  closeureFunct() {
+    const collapsed = 0;
+    const exppand = this.viewConfig.left.width;
+    let tog = true;
+    this.toggle = () => {
+      this.viewConfig.left.width = tog ? collapsed : exppand;
+      tog = !tog;
+    };
   }
+
+  invocFunct() {}
 
   public isMobile(): boolean {
     return window.innerWidth < 767.98;
