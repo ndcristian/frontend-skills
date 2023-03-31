@@ -46,10 +46,9 @@ export class ViewLayoutComponent implements OnInit {
     },
     body: {
       show: 'show',
-      width: 100,
     },
   };
-  toggleLeft;
+  toggle;
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
@@ -59,8 +58,8 @@ export class ViewLayoutComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    console.log('isMobile:', this.isMobile());
     this.initCloseureFunct();
+    this.viewConfig.body.width = 100 - this.viewConfig.left.width - this.viewConfig.right.width;
   }
 
   initCloseureFunct() {
@@ -77,10 +76,16 @@ export class ViewLayoutComponent implements OnInit {
       header: this.viewConfig.header.width,
       footer: this.viewConfig.footer.width,
     };
-    this.toggleLeft = (menu: string) => {
-      this.viewConfig[menu].width = toggleState[menu] ? collapsed : viewExppandValues[menu];
+    this.toggle = (menu: string) => {
+      this.viewConfig[menu].width = toggleState[menu]
+        ? collapsed
+        : viewExppandValues[menu];
+      if (this.viewConfig[menu].width === 0) {
+        this.viewConfig.body.width += viewExppandValues[menu].width
+      } else {
+        this.viewConfig.body.width -= viewExppandValues[menu].width
+      }
       toggleState[menu] = !toggleState[menu];
-      console.log(toggleState);
     };
   }
 

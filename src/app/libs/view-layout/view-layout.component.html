@@ -6,12 +6,18 @@
       [ngStyle]="{ width: viewConfig.left.width + '%' }"
     >
       <div class="main-left-menu-content"></div>
-      <div class="main-left-menu-toggler" (click)="toggleLeft('left')"></div>
+      <div class="main-left-menu-toggler" (click)="toggle('left')"></div>
     </div>
     <div class="main-content">
       <router-outlet></router-outlet>
     </div>
-    <div class="main-right-menu display-{{ viewConfig.right.show }}"></div>
+    <div
+      class="main-right-menu display-{{ viewConfig.right.show }}"
+      [ngStyle]="{ width: viewConfig.right.width + '%' }"
+    >
+      <div class="main-right-menu-content"></div>
+      <div class="main-right-menu-toggler" (click)="toggle('right')"></div>
+    </div>
   </div>
 
   <div class="main-footer"></div>
