@@ -51,6 +51,10 @@ import { ArraysComponent } from './modules/java-script/arrays/arrays.component';
 import { LetVarComponent } from './modules/java-script/let-var/let-var.component';
 import { StructuresOperatorsComponent } from './modules/java-script/structures-operators/structures-operators.component';
 import { ViewLayoutComponent } from './libs/view-layout/view-layout.component';
+import { CoursesComponent } from './modules/angular/directives/structural-directive/courses/courses.component';
+import { CourseCardComponent } from './modules/angular/directives/structural-directive/course-card/course-card.component';
+import { ShopViewComponent } from './modules/angular/directives/structural-directive/shop-view/shop-view.component';
+import { RefactorCardDirective } from './modules/angular/directives/structural-directive/refactor-card.directive';
 
 @NgModule({
   declarations: [
@@ -98,7 +102,11 @@ import { ViewLayoutComponent } from './libs/view-layout/view-layout.component';
     ArraysComponent,
     LetVarComponent,
     StructuresOperatorsComponent,
-    ViewLayoutComponent
+    ViewLayoutComponent,
+    CoursesComponent,
+    CourseCardComponent,
+    ShopViewComponent,
+    RefactorCardDirective
   ],
   imports: [
     BrowserModule,

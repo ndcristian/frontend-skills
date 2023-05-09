@@ -34,6 +34,7 @@ import { ObservableComponent } from './modules/rxjs/observable/observable.compon
 import { GenericTypeComponent } from './modules/typescript/generic-type/generic-type.component';
 import { SpecificTypesComponent } from './modules/typescript/specific-types/specific-types.component';
 import { WsComponent } from './modules/websocket/ws/ws.component';
+import { ShopViewComponent } from './modules/angular/directives/structural-directive/shop-view/shop-view.component';
 
 
 const routes: Routes = [
@@ -119,7 +120,10 @@ const routes: Routes = [
       },
     ]
   },
- 
+  {
+    path:'sd',
+    component:ShopViewComponent
+  },
   {
     path:'rxjs/observable',
     component:ObservableComponent
