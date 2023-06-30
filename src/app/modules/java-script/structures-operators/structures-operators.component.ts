@@ -49,7 +49,7 @@ export class StructuresOperatorsComponent implements OnInit {
     console.log(arrName);
 
     //OR
-    const arrOfName = [..."Cristi"];
+    const arrOfName = [...'Cristi'];
     console.log(arrOfName);
 
     /*
@@ -121,5 +121,14 @@ export class StructuresOperatorsComponent implements OnInit {
 
     //OR this works only if undefined or null
     rest2.location ??= 'Bucuresti';
+
+    // Non-null assertion operator
+    type Employee = {
+      name: string;
+      country: string;
+    };
+    let employee: Employee | undefined; // 👈️ could be undefined
+
+    employee!.country = 'Germany';
   }
 }
