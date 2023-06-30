@@ -55,6 +55,7 @@ import { CoursesComponent } from './modules/angular/directives/structural-direct
 import { CourseCardComponent } from './modules/angular/directives/structural-directive/course-card/course-card.component';
 import { ShopViewComponent } from './modules/angular/directives/structural-directive/shop-view/shop-view.component';
 import { RefactorCardDirective } from './modules/angular/directives/structural-directive/refactor-card.directive';
+import { InterfaceImplComponent } from './modules/typescript/interface-impl/interface-impl.component';
 
 @NgModule({
   declarations: [
@@ -106,7 +107,8 @@ import { RefactorCardDirective } from './modules/angular/directives/structural-d
     CoursesComponent,
     CourseCardComponent,
     ShopViewComponent,
-    RefactorCardDirective
+    RefactorCardDirective,
+    InterfaceImplComponent
   ],
   imports: [
     BrowserModule,
