@@ -1,0 +1,11 @@
+<div class="form-template-wrapper">
+  <form class="login-form" #loginForm="ngForm" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Name" ngModel />
+    <input type="text" name="size" placeholder="Size" ngModel />
+    <button (click)="login(loginForm)">SEND</button>
+  </form>
+  <input type="file" name="file" placeholder="File"  (change)="uploadFile($event)"  />
+  <div class="form-val">
+    {{ loginForm.value | json }}
+</div>
+</div>

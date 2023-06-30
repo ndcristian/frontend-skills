@@ -56,6 +56,8 @@ import { CourseCardComponent } from './modules/angular/directives/structural-dir
 import { ShopViewComponent } from './modules/angular/directives/structural-directive/shop-view/shop-view.component';
 import { RefactorCardDirective } from './modules/angular/directives/structural-directive/refactor-card.directive';
 import { InterfaceImplComponent } from './modules/typescript/interface-impl/interface-impl.component';
+import { FormTemplateComponent } from './modules/angular/form-template/form-template.component';
+import { FormReactiveComponent } from './modules/angular/form-reactive/form-reactive.component';
 
 @NgModule({
   declarations: [
@@ -108,7 +110,9 @@ import { InterfaceImplComponent } from './modules/typescript/interface-impl/inte
     CourseCardComponent,
     ShopViewComponent,
     RefactorCardDirective,
-    InterfaceImplComponent
+    InterfaceImplComponent,
+    FormTemplateComponent,
+    FormReactiveComponent,
   ],
   imports: [
     BrowserModule,
@@ -117,9 +121,9 @@ import { InterfaceImplComponent } from './modules/typescript/interface-impl/inte
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [WsService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
