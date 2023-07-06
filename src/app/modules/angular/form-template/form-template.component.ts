@@ -10,8 +10,13 @@ import { HttpHeaders, HttpParams } from '@angular/common/http';
 })
 export class FormTemplateComponent implements OnInit {
   constructor(private crudService: CrudService) {}
+  value = 'something that comes from form or input field';
+  /** validate form/ field input */
+  hasUpperCase = /[A-z]+/.test(this.value);
+  hasLowewrCase = /[a-z]+/.test(this.value);
+  hasNumeric = /[0-9]+/.test(this.value);
 
-  file: File
+  file: File;
 
   ngOnInit(): void {}
 
@@ -23,7 +28,7 @@ export class FormTemplateComponent implements OnInit {
     const hexValue = new FormData();
     hexValue.append('file', this.file);
     let params = new HttpParams();
-    params = params.append("name", "ASRFD");
+    params = params.append('name', 'ASRFD');
     this.crudService.post('file/test', hexValue, params).subscribe((res) => {
       console.log('*****', res);
     });
@@ -31,7 +36,7 @@ export class FormTemplateComponent implements OnInit {
 
   uploadFile(event) {
     console.log(event.target.files[0]);
-    
-    this.file = event.target.files[0]
+
+    this.file = event.target.files[0];
   }
 }
