@@ -1,11 +1,45 @@
 <div class="form-template-wrapper">
   <form class="login-form" #loginForm="ngForm" enctype="multipart/form-data">
-    <input type="text" name="name" placeholder="Name" ngModel />
-    <input type="text" name="size" placeholder="Size" ngModel />
+    <input
+      type="text"
+      name="name"
+      placeholder="Name"
+      ngModel
+      minlength="3"
+      maxlength="9"
+    />
+    <input
+      type="text"
+      name="last"
+      placeholder="LastName"
+      ngModel
+      minlength="3"
+      maxlength="9"
+      (ngModelChange)="onLastNameChanged($event)"
+      [ngModelOptions]="{ updateOn: 'blur' }"
+    />
+    <!-- 
+      (ngModelChange)="onLastNameChanged($event)" ==> this will be treiggerd for each change , any key press
+      [ngModelOptions]="{updateOn:'blur'}"        ==> using this,the method will be called after the typeing is finished and user click outside 
+      [ngModelOptions]="{updateOn:'change'}"      ==> this is the default behavior, like the first
+      [ngModelOptions]="{updateOn:'submit'}"      ==> using this,the method will be called ehwn user sumit the form
+      [ngModelOptions]="{name:'last'}"            ==> usefull when you can not use name tag tu set the name of the field or you want to set it dynamically
+      [ngModelOptions]="{standalone:true}"        ==> in this case the filed is no longer part of the form, it acts as standalone input
+     -->
+    <!-- <input type="text" name="name" placeholder="Name" ngModel #email="ngModel"/> use #email="ngModel" to get this filed value -->
+    <input type="text" name="size" placeholder="Size" ngModel passwordStrength />
     <button (click)="login(loginForm)">SEND</button>
   </form>
-  <input type="file" name="file" placeholder="File"  (change)="uploadFile($event)"  />
+  <input
+    type="file"
+    name="file"
+    placeholder="File"
+    (change)="uploadFile($event)"
+  />
   <div class="form-val">
     {{ loginForm.value | json }}
-</div>
+  </div>
+  <div class="form-val">
+    <!-- {{email.value }} -->
+  </div>
 </div>

@@ -39,4 +39,8 @@ export class FormTemplateComponent implements OnInit {
 
     this.file = event.target.files[0];
   }
+
+  onLastNameChanged(evt){
+    console.log(evt)
+  }
 }

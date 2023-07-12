@@ -58,6 +58,7 @@ import { RefactorCardDirective } from './modules/angular/directives/structural-d
 import { InterfaceImplComponent } from './modules/typescript/interface-impl/interface-impl.component';
 import { FormTemplateComponent } from './modules/angular/form-template/form-template.component';
 import { FormReactiveComponent } from './modules/angular/form-reactive/form-reactive.component';
+import { PasswordStrengthDirective } from './modules/angular/directives/passord-strength.directive';
 
 @NgModule({
   declarations: [
@@ -113,6 +114,7 @@ import { FormReactiveComponent } from './modules/angular/form-reactive/form-reac
     InterfaceImplComponent,
     FormTemplateComponent,
     FormReactiveComponent,
+    PasswordStrengthDirective
   ],
   imports: [
     BrowserModule,
