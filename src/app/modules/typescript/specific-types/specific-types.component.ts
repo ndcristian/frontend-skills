@@ -24,6 +24,7 @@ type Combinable = string | number;
   styleUrls: ['./specific-types.component.scss'],
 })
 export class SpecificTypesComponent implements OnInit {
+  //https://www.digitalocean.com/community/tutorials/how-to-create-custom-types-in-typescript
   /* Tuples */
   role: [string, number];
 

@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   constructor(private router: Router) {}
   ngOnInit(): void {
-    this.router.navigate(['/ng/form-template']);
+    this.router.navigate(['/html/before-after']);
+    //html/layout
   }
   title = 'frontend-skills';
 }
