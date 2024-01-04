@@ -37,6 +37,7 @@ import { WsComponent } from './modules/websocket/ws/ws.component';
 import { ShopViewComponent } from './modules/angular/directives/structural-directive/shop-view/shop-view.component';
 import { InterfaceImplComponent } from './modules/typescript/interface-impl/interface-impl.component';
 import { FormTemplateComponent } from './modules/angular/form-template/form-template.component';
+import { StructuresOperatorsComponent } from './modules/java-script/structures-operators/structures-operators.component';
 
 
 const routes: Routes = [
@@ -198,7 +199,10 @@ const routes: Routes = [
     path:'v',
     component:ViewLayoutComponent
   },
-
+  {
+    path:'operator',
+    component:StructuresOperatorsComponent
+  },
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy', useHash: true })],

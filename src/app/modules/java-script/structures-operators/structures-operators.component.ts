@@ -76,7 +76,7 @@ export class StructuresOperatorsComponent implements OnInit {
 
     /* Short Circuiting */
 
-    /* OR Operator - works with false values like 0, undefined,'', null, false
+    /* OR Operator - works with falsy values like 0, undefined,'', null, false
     returns the first truth value of the chain
     */
     console.log(2 || 'John');
@@ -92,7 +92,7 @@ export class StructuresOperatorsComponent implements OnInit {
     console.log(undefined || null);
     /*Retuns null even if all params ar evaluated as fals, the last one will be returned */
 
-    /* AND Operator - works with false values like 0, undefined,'', null, false
+    /* AND Operator - works with falsy and truthy values like 0, undefined,'', null, false
     returns the first false value of the chain
     works in an oposite way as OR
     */

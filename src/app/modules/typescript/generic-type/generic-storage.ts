@@ -23,7 +23,7 @@ export interface StorageModel {
 }
 
 export class Storage<T extends StorageModel> {
-  data: T[] = [];
+  public data: T[] = [];
 
   addProduct(prod: T) {
     this.data.push(prod);
@@ -38,6 +38,13 @@ export class Storage<T extends StorageModel> {
   }
 }
 
+export class Test {
+  test: Storage<Phone> = new Storage<Phone>();
+  howToUseIt() {
+    this.test.data;
+    this.test.getProdFromLocation(1)
+  }
+}
 export class Phone implements StorageModel {
   producer: string;
   model: string;
