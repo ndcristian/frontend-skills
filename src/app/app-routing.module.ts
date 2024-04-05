@@ -38,6 +38,7 @@ import { ShopViewComponent } from './modules/angular/directives/structural-direc
 import { InterfaceImplComponent } from './modules/typescript/interface-impl/interface-impl.component';
 import { FormTemplateComponent } from './modules/angular/form-template/form-template.component';
 import { StructuresOperatorsComponent } from './modules/java-script/structures-operators/structures-operators.component';
+import { OtherCssPropsComponent } from './modules/css/other-css-props/other-css-props.component';
 
 
 const routes: Routes = [
@@ -52,6 +53,10 @@ const routes: Routes = [
   {
     path: 'css/display',
     component: DisplayComponent,
+  },
+  {
+    path: 'css/other-css',
+    component: OtherCssPropsComponent,
   },
   {
     path:'html/before-after',

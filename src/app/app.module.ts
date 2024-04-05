@@ -59,6 +59,7 @@ import { InterfaceImplComponent } from './modules/typescript/interface-impl/inte
 import { FormTemplateComponent } from './modules/angular/form-template/form-template.component';
 import { FormReactiveComponent } from './modules/angular/form-reactive/form-reactive.component';
 import { PasswordStrengthDirective } from './modules/angular/directives/passord-strength.directive';
+import { OtherCssPropsComponent } from './modules/css/other-css-props/other-css-props.component';
 
 @NgModule({
   declarations: [
@@ -114,7 +115,8 @@ import { PasswordStrengthDirective } from './modules/angular/directives/passord-
     InterfaceImplComponent,
     FormTemplateComponent,
     FormReactiveComponent,
-    PasswordStrengthDirective
+    PasswordStrengthDirective,
+    OtherCssPropsComponent
   ],
   imports: [
     BrowserModule,

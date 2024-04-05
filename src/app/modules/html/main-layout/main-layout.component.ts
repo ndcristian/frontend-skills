@@ -23,7 +23,7 @@ export class MainLayoutComponent implements OnInit {
     { name: 'observable', url: '/observable' },
     { name: 'arrays', url: '/arays' },
     { name: 'view-child', url: '/view-child' },
-    { name: 'sss', url: 'asdf' },
+    { name: 'other-css', url: 'other-css' },
     { name: 'sss', url: 'asdf' },
     { name: 'sss', url: 'asdf' },
     { name: 'sss', url: 'asdf' },

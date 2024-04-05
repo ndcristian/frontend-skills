@@ -1,0 +1,47 @@
+
+/** https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+div {
+  /* clamp funtie 12px e val minima, 1vw+10px e valaoarea preferata
+   si responsiv in acelasi timp si 40px e val maxima */
+  font-size: clamp(12px, 1vw + 10px, 40px);
+  /* poate fi combinata cu min() si max()*/
+  //   font-size: clamp(min(10vw, 20rem), calc(calc(30% / 20) + 10px), max(90vw, 55rem));
+}
+.test-flex-props {
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  //   flex-wrap: wrap;
+  border: 1px solid orange;
+  padding: 10px;
+  gap: 10px;
+  justify-content: space-evenly;
+  .flex-item {
+    box-sizing: border-box;
+    border: 1px solid darkblue;
+    order: 1;
+    display: flex;
+    padding: 5px;
+    &:nth-child(3) {
+      /* le pune in ordinea definit aici*/
+      order: 1;
+      flex-basis: 140px; /* este valoarea de baza de la care se pleaca */
+      width: 170px; /* in caest caz ignora width. Ia valoarea de la basis */
+    
+    }
+    &:nth-child(1) {
+        flex-grow: 0; /* tine de cat sa se mareasca functie de spatiul disponibil */
+        flex-shrink: 2; /* tine de cat sa se micsoreze funtie de spatiu disponibil */
+       
+      }
+    &:nth-child(7) {
+      order: 3;
+    }
+    &:nth-child(2) {
+      order: 1;
+      flex-grow: 0;
+     
+    }
+  }
+}
