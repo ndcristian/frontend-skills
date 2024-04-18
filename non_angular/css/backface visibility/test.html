@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of CSS3 backface-visibility Property</title>
+<style>
+.flip-container {
+    margin: 50px;
+    perspective: 1000px;
+    display: inline-block;
+}
+.flip-container:hover .card {
+    transform: rotateY(180deg);
+}
+.card, .front, .back {
+    width: 130px;
+    height: 195px;
+}
+.card {
+    position: relative;
+    transition: 0.5s all;
+    transform-style: preserve-3d;
+}
+.front, .back {
+    position: absolute;
+    backface-visibility: hidden;
+}
+.front {
+    z-index: 1;
+    transform: rotateY(180deg);
+    
+}
+.back {
+    z-index: 2;
+    transform: rotateY(0deg);
+    
+}
+</style>
+</head>
+<body>
+    <div class="flip-container">
+		<div class="card">
+			<img src="card-back.jpg" class="back" alt="Card Back" />
+			<img src="card-front.jpg" class="front" alt="Card Front" />			
+		</div>
+	</div>
+	<p><strong>Note:</strong> Place mouse pointer over the card image to see the backface-visibility property in action.</p>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of CSS3 object-fit Property</title>
+<style>
+html, body {
+  height: auto;
+}
+
+.holder {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.element {
+  width: 300px;
+  height: 200px;
+  background-color: #333;
+}
+
+.fill {
+  width: inherit;
+  height: inherit;
+  object-fit: fill;
+}
+
+.cover {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.contain {
+  width: inherit;
+  height: inherit;
+  object-fit: contain;
+}
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="holder">
+      <div>object-fit: fill</div>
+      <div class="element">
+        <img src="https://unsplash.it/600/900?random" class="fill">
+      </div>
+    </div>
+    <div class="holder">
+      <div>object-fit: contain</div>
+      <div class="element">
+        <img src="https://unsplash.it/600/900?random" class="contain">
+      </div>
+    </div>
+    <div class="holder">
+      <div>object-fit: cover</div>
+      <div class="element">
+        <img src="https://unsplash.it/600/900?random" class="cover">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

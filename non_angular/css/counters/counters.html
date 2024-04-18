@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of CSS3 counters Property</title>
+<style>
+body {
+  counter-reset: heading;                                                                                                
+}
+h1 {
+  counter-increment: heading; 
+  counter-reset: subheading; 
+               
+}
+h1:before {
+  content: counter(heading) " - "; 
+}
+h2 {
+  counter-increment: subheading; 
+}
+h2:before {
+  content: counter(heading) "." counter(subheading) " - ";
+}
+
+.wrap {
+  padding: 0px 24px 12px 24px;
+}
+</style>
+</head>
+<body>
+  
+<div class="wrap">
+  <h1>Beginnings at Netscape</h1>
+  <p>In 1993, the National Center for Supercomputing Applications (NCSA), a unit of the University of Illinois at Urbana-Champaign, released NCSA Mosaic, the first popular graphical Web browser, which played an important part in expanding the growth of the nascent World Wide Web.</p>
+  
+  <h1>Server-side JavaScript</h1>
+  <p>Netscape introduced an implementation of the language for server-side scripting with Netscape Enterprise Server in December 1995, soon after releasing JavaScript for browsers.</p>
+  
+  <h1>Adoption by Microsoft</h1>
+  <p>Microsoft script technologies including VBScript and JScript were released in 1996. JScript, a reverse-engineered implementation of Netscape's JavaScript, was part of Internet Explorer 3.</p>
+  <h2>Standardization</h2>
+  <p>In November 1996, Netscape submitted JavaScript to Ecma International to carve out a standard specification, which other browser vendors could then implement based on the work done at Netscape. This led to the official release of the language specification ECMAScript published in the first edition of the ECMA-262 standard in June 1997</p>
+  <h2>Later developments</h2>
+  <p>JavaScript has become one of the most popular programming languages on the Web. </h2>
+  <h2>Initially</h2>
+  <p>Initially, however, many professional programmers denigrated the language because, among other reasons, its target audience consisted of Web authors and other such "amateurs".</h2>
+  
+  
+</div>
+</body>
+</html>

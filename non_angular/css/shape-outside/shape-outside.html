@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of CSS3 shape-outside Property</title>
+<style>
+.container {
+  width: 500px;
+}
+.shape-outside {
+  shape-outside: circle(50%);
+  float: left;
+}
+
+.circle {
+  width: 160px;
+  height: 160px;
+  background-color: #e61c1c;
+  border-radius: 50%;
+  margin-right: 24px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+div {
+  text-align: justify;
+}
+
+html, body {
+  height: auto;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <div class="circle shape-outside">
+        <img src="https://unsplash.it/400/400?random">
+      </div>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam massa tellus, mollis sit amet sodales vitae, placerat dignissim mi. Pellentesque interdum lacus eget diam maximus consequat quis ut dolor. Nullam massa odio, rhoncus ac varius non, porta in arcu. Nulla tempus, mi ac facilisis cursus, leo nulla ultrices erat, vitae lobortis metus diam at nibh. Sed commodo augue eu sodales porttitor. Phasellus non malesuada purus, nec scelerisque massa. Etiam vitae aliquam augue, sed pharetra felis. Fusce sodales tellus vitae mi suscipit dignissim. Mauris ac tempor lacus, non vulputate nunc. Sed rutrum, augue et suscipit vulputate, diam felis ornare massa, et efficitur sapien nisl ac lectus. Nulla congue magna orci, a lacinia elit convallis.
+    </div>
+  </div>
+</body>
+</html>

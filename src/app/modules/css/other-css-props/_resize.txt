@@ -1,0 +1,4 @@
+resize: both permite redimensionarea oricarui element pe H si W
+
+trbuie si overflow:auto/hidden 
+merge cu min-width max-width

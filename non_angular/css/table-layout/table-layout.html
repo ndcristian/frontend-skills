@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of CSS3 table-layout Property</title>
+<style>
+html, body {
+  height: auto;
+  font-size: 14px;
+}
+.content {
+  margin: 0 auto;
+  width: 400px;
+  padding: 0 24px 24px;
+}
+table {
+  text-align: left;
+  width: 400px;
+}
+h2 {
+  margin-bottom: 0;
+}
+.fixed {
+  table-layout: fixed;
+}
+
+</style>
+</head>
+<body>
+  <div class="content"> 
+    <h2>fixed</h2>
+    <table class="fixed">
+      <thead>
+        <th>Name</th>
+        <th>City</th>
+        <th>Phone</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Gregory</td>
+          <td>New York</td>
+          <td>918-745-9652</td>
+        </tr>
+        <tr>
+          <td>Daniel</td>
+          <td>San Francisco</td>
+          <td>585-365-9088</td>
+        </tr>
+        <tr>
+          <td>Megan</td>
+          <td>London</td>
+          <td>925-277-4296</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h2>auto (default)</h2>
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>City</th>
+        <th>Phone</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Gregory</td>
+          <td>New York</td>
+          <td>918-745-9652</td>
+        </tr>
+        <tr>
+          <td>Daniel</td>
+          <td>San Francisco</td>
+          <td>585-365-9088</td>
+        </tr>
+        <tr>
+          <td>Megan</td>
+          <td>London</td>
+          <td>925-277-4296</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

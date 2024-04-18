@@ -1,0 +1,1 @@
+pointer-events: none; va anula orice event pe acel element (click, swipe, etc)

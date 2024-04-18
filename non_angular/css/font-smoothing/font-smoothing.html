@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of CSS3 font-smoothing Property</title>
+<style>
+.-smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.5em;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #fff;
+}
+
+.container {
+  height: 100%;
+  padding: 52px;
+  width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;  
+}
+
+body {
+  background-color: #1D1F20;
+}
+</style>
+</head>
+<body>
+  
+  <div class="container">
+    <span class="text -smooth">
+      "-smooth" class. The smooth version precisely reflects the browser fonts, making them look exactly how you see them in the Sketch App. 
+    </span>
+    <span class="text">
+      No "-smooth" class. The smooth version precisely reflects the browser fonts, making them look exactly how you see them in the Sketch App. 
+    </span>
+  </div>
+</body>
+</html>

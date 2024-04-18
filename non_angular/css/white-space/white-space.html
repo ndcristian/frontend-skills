@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of CSS3 white-space Property</title>
+<style>
+html, body {
+  height: auto;
+  font-size: 14px;
+}
+.container {
+  margin: 0 auto;
+  width: 800px;
+  padding: 20px;
+  border: 1px solid #000;
+  margin: 20px;
+}
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 20px;
+  }
+.normal {
+  white-space: normal; //collapse new lines, collapse spaces and tabs, text wrap
+}
+.nowrap {
+  white-space: nowrap; //collapse new lines, collapse spaces and tabs, text nowrap
+}
+.pre {
+  white-space: pre; //preserve new lines, preserve spaces and tabs, text nowrap
+}
+.pre-wrap {
+  white-space: pre-wrap; //preserve new lines, preserve spaces and tabs, text wrap
+}
+
+.pre-line {
+  white-space: pre-line; //preserve new lines, collapse spaces and tabs, text wrap
+}
+
+</style>
+</head>
+<body>
+  <div class="title">Normal - collapse new lines, collapse spaces and tabs, text wrap</div>
+  <div class="container">
+    <div class="normal">
+  Lorem ipsum         dolor sit amet, consectetur adipiscing elit. 
+      Praesent nec facilisis velit. Curabitur eu justo interdum, elementum tellus nec, dictum justo. 
+            Fusce sit amet leo metus. Integer ante nisl,   auctor eget ante sit amet, aliquet        pulvinar neque. Nunc pulvinar lectus neque, sit amet posuere orci aliquam ac.   
+    </div>
+  </div>
+
+  <div class="title">Nowrap - collapse new lines, collapse spaces and tabs, text nowrap</div>
+  <div class="container">
+    <div class="nowrap">
+      Lorem ipsum         dolor sit amet, consectetur adipiscing elit. 
+          Praesent nec facilisis velit. Curabitur eu justo interdum, elementum tellus nec, dictum justo. 
+                Fusce sit amet leo metus. Integer ante nisl,   auctor eget ante sit amet, aliquet        pulvinar neque. Nunc pulvinar lectus neque, sit amet posuere orci aliquam ac.   
+    </div>
+  </div>
+
+  <div class="title">Pre - preserve new lines, preserve spaces and tabs, text nowrap</div>
+  <div class="container">
+    <div class="pre">
+      Lorem ipsum         dolor sit amet, consectetur adipiscing elit. 
+          Praesent nec facilisis velit. Curabitur eu justo interdum, elementum tellus nec, dictum justo. 
+                Fusce sit amet leo metus. Integer ante nisl,   auctor eget ante sit amet, aliquet        pulvinar neque. Nunc pulvinar lectus neque, sit amet posuere orci aliquam ac.   
+    </div>    
+  </div>
+
+  <div class="title">Pre-wrap - preserve new lines, preserve spaces and tabs, text wrap</div>
+  <div class="container">
+    <div class="pre-wrap">
+      Lorem ipsum         dolor sit amet, consectetur adipiscing elit. 
+          Praesent nec facilisis velit. Curabitur eu justo interdum, elementum tellus nec, dictum justo. 
+                Fusce sit amet leo metus. Integer ante nisl,   auctor eget ante sit amet, aliquet        pulvinar neque. Nunc pulvinar lectus neque, sit amet posuere orci aliquam ac.   
+    </div>    
+  </div>
+
+  <div class="title">Pre-line - preserve new lines, collapse spaces and tabs, text wrap</div>
+  <div class="container">
+    <div class="pre-line">
+      Lorem ipsum         dolor sit amet, consectetur adipiscing elit. 
+          Praesent nec facilisis velit. Curabitur eu justo interdum, elementum tellus nec, dictum justo. 
+                Fusce sit amet leo metus. Integer ante nisl,   auctor eget ante sit amet, aliquet        pulvinar neque. Nunc pulvinar lectus neque, sit amet posuere orci aliquam ac.   
+    </div>    
+  </div>
+</body>
+</html>

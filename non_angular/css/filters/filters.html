@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of CSS3 filters Property</title>
+<style>
+.-blur {
+  filter: blur(2px);
+}
+
+.-brightness {
+  filter: brightness(2.5);
+}
+
+.-contrast {
+  filter: contrast(250%);
+}
+
+.-hue-rotate {
+  filter: hue-rotate(60deg);
+}
+
+.-invert {
+  filter: invert(85%);
+}
+
+.-opacity {
+  filter: opacity(50%);
+}
+
+.-saturate {
+  filter: saturate(100%);
+}
+
+.-sepia {
+  filter: sepia(80%);
+}
+
+.-multiple {
+  filter: hue-rotate(70deg) saturate(145%) brightness(145%);
+}
+
+.holder {
+  font-size: 20px;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+  width: 300px;
+  img {
+    width: 100%;
+  }
+}
+
+html, body {
+  height: auto;
+}
+</style>
+</head>
+<body>
+  
+  <div class="container -column">
+    <div class="holder">
+      normal:
+      <img src="https://fastly.picsum.photos/id/75/600/400.jpg?hmac=olla_27PZyIqxcqEjejcrUfMVCmVglub6idhKAiPUm0">
+    </div>
+    <div class="holder">
+      blur:
+      <img src="https://fastly.picsum.photos/id/75/600/400.jpg?hmac=olla_27PZyIqxcqEjejcrUfMVCmVglub6idhKAiPUm0" class="-blur">
+    </div>
+    <div class="holder">
+      brightness:
+      <img src="https://fastly.picsum.photos/id/75/600/400.jpg?hmac=olla_27PZyIqxcqEjejcrUfMVCmVglub6idhKAiPUm0" class="-brightness">
+    </div>
+    <div class="holder">
+      contrast:
+      <img src="https://fastly.picsum.photos/id/75/600/400.jpg?hmac=olla_27PZyIqxcqEjejcrUfMVCmVglub6idhKAiPUm0" class="-contrast">
+    </div>
+    <div class="holder">
+      hue-rotate:
+      <img src="https://fastly.picsum.photos/id/75/600/400.jpg?hmac=olla_27PZyIqxcqEjejcrUfMVCmVglub6idhKAiPUm0" class="-hue-rotate">
+    </div>
+    <div class="holder">
+      invert:
+      <img src="https://fastly.picsum.photos/id/75/600/400.jpg?hmac=olla_27PZyIqxcqEjejcrUfMVCmVglub6idhKAiPUm0" class="-invert">
+    </div>
+    <div class="holder">
+      saturate:
+      <img src="https://fastly.picsum.photos/id/75/600/400.jpg?hmac=olla_27PZyIqxcqEjejcrUfMVCmVglub6idhKAiPUm0" class="-saturate">
+    </div>
+    <div class="holder">
+      sepia:
+      <img src="https://fastly.picsum.photos/id/75/600/400.jpg?hmac=olla_27PZyIqxcqEjejcrUfMVCmVglub6idhKAiPUm0" class="-sepia">
+    </div>
+    <div class="holder">
+      multiple filters:
+      <img src="https://fastly.picsum.photos/id/75/600/400.jpg?hmac=olla_27PZyIqxcqEjejcrUfMVCmVglub6idhKAiPUm0" class="-multiple">
+    </div>
+  </div>
+</body>
+</html>

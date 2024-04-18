@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of CSS3 hyphens Property</title>
+<style>
+.container {
+  width: 500px;
+  margin: 0px auto;
+} 
+.hyphens {
+  hyphens: manual;
+  margin: 12px 0;
+  align-self: flex-start;
+}
+
+.-shy {
+  width: 160px;
+  border: 1px solid #000;
+}
+</style>
+</head>
+<body>
+  <div class="container -column">
+    <div class="hyphens -shy">
+      A hyphen will be rend&shy;ered if necessary
+    </div>
+    <div class="hyphens">
+      A hyphen will be rend&hyphen;ered even where the line is not broken
+    </div>
+  </div>
+</body>
+</html>
