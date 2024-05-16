@@ -24,13 +24,18 @@ function whoNonStrict(){
     console.log("Regular function not strict:", this)
 }
 
-const sayName = ()=>{
+const sayStrict = ()=>{
     "use strict";
-    console.log("Arrow function", this)
+    console.log("Arrow function STRICT", this)
+}
+
+const sayNoStrict = ()=>{
+    console.log("Arrow function NO STRICT", this)
 }
 
 person.greetings();
 person.salut();
 whoStrict();
 whoNonStrict();
-sayName();
+sayStrict();
+sayNoStrict();

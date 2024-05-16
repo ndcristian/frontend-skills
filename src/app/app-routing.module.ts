@@ -28,7 +28,6 @@ import { GenericFormComponent } from './modules/html/generic-form/generic-form.c
 import { GenericInputComponent } from './modules/html/generic-input/generic-input.component';
 import { MainLayoutComponent } from './modules/html/main-layout/main-layout.component';
 import { NgTemplateFormComponent } from './modules/html/ng-template-form/ng-template-form.component';
-import { ArraysComponent } from './modules/java-script/arrays/arrays.component';
 import { EventHendlerComponent } from './modules/java-script/event-hendler/event-hendler.component';
 import { ObservableComponent } from './modules/rxjs/observable/observable.component';
 import { GenericTypeComponent } from './modules/typescript/generic-type/generic-type.component';
@@ -117,10 +116,6 @@ const routes: Routes = [
       {
         path:'observable',
         component:ObservableComponent
-      },
-      {
-        path:'arays',
-        component:ArraysComponent
       },
       {
         path:'view-child',

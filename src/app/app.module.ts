@@ -47,7 +47,6 @@ import { FileDndDirective } from './libs/directives/file-dnd.directive';
 import { IconComponent } from './libs/icon/icon.component';
 import { ProgressBarComponent } from './libs/progress-bar/progress-bar.component';
 import { ThreeDotsMenuComponent } from './libs/three-dots-menu/three-dots-menu.component';
-import { ArraysComponent } from './modules/java-script/arrays/arrays.component';
 import { LetVarComponent } from './modules/java-script/let-var/let-var.component';
 import { StructuresOperatorsComponent } from './modules/java-script/structures-operators/structures-operators.component';
 import { ViewLayoutComponent } from './libs/view-layout/view-layout.component';
@@ -104,7 +103,6 @@ import { OtherCssPropsComponent } from './modules/css/other-css-props/other-css-
     ProgressBarComponent,
     EventHendlerComponent,
     ThreeDotsMenuComponent,
-    ArraysComponent,
     LetVarComponent,
     StructuresOperatorsComponent,
     ViewLayoutComponent,
