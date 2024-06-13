@@ -1,0 +1,41 @@
+/* takes all <p> from body div */
+body div p {
+  font-weight: bolder;
+  & i {
+    color: black;
+    font-weight: lighter;
+  }
+  /* also works like this */
+  i {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+}
+
+/* takes all <p> from .div-1 class */
+.div-1 > p {
+  color: rgb(255, 0, 34);
+
+}
+/* takes  the 2-th from .div-2 .div-subtitle */
+.div-2 .div-subtitle :nth-child(5) {
+  font-style: oblique;
+  font-size: large;
+}
+/* takes  the 3-th from .div-2 .div-subtitle */
+.div-2 .div-subtitle :nth-child(3) {
+  text-decoration: underline;
+}
+/* takes all the <a> elements that are immediately preceded by <span>  */
+span + a {
+  color: orange;
+  text-decoration: underline;
+}
+
+.div-2 span ~ a {
+    color: red;
+    text-decoration: underline;
+  }
+
+.div {
+  height: auto;
+}
