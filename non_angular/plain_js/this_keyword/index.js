@@ -39,3 +39,5 @@ whoStrict();
 whoNonStrict();
 sayStrict();
 sayNoStrict();
+
+/** In case of EventListener like click a button , the THIS keyword wil points to the elements itself , the button element */
