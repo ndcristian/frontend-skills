@@ -18,6 +18,15 @@ enum Role3 {
 
 type Combinable = string | number;
 
+type TUser = {
+  name: string;
+  age: number;
+};
+
+type TAdmin = {
+  role: string;
+};
+
 @Component({
   selector: 'app-specific-types',
   templateUrl: './specific-types.component.html',
@@ -36,11 +45,27 @@ export class SpecificTypesComponent implements OnInit {
   /* Literal type */
   gender: 'male' | 'female';
 
+  // union type
+  admin: TUser & TAdmin;
+
   constructor() {}
 
   ngOnInit(): void {
     console.log(Role.ADMIN);
     console.log(Role2.ADMIN);
     console.log(Role3.ADMIN);
+
+    this.role = ["3",4]
+
+    this.admin = { name: 'cris', age: 23, role: 'admin' };
+
+    const oth = new OtrherUser();
+
   }
+}
+// a class can implements a type as well as an interface
+class OtrherUser implements TUser {
+  name: string;
+  age: number;
+  private right: string
 }

@@ -13,11 +13,16 @@ console.log(a, b, c, k);
 /*Skiping elements*/
 const [aa, , bb] = [1, 2, 3];
 console.log(aa, bb);
+
 /*Destructuring objects */
 const person = {
   name: "Mark",
   age: 28,
   city: "New York",
+  address: {
+    street: "Street No.1",
+    number: 44,
+  },
 };
 
 const { age, city } = person;
@@ -26,6 +31,20 @@ console.log(age, city);
 /*If we want to change the property name into another one */
 const { age: personAge, city: personLocation } = person;
 console.log(personAge, personLocation);
+
+const {
+  name: personName,
+  address: { street },
+} = person;
+console.log(personName, street)
+
+/*Destructuring objects as function parameters */
+
+function printUser({name, age, favoriteFood = "Pizza"}){
+    console.log(`Name is${name}. Age is${age}`)
+}
+printUser(person)
+
 
 /*Destructuring strings */
 const name = "Cristi";
