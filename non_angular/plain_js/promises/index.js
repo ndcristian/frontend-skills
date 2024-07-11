@@ -14,7 +14,7 @@ let p2 = new Promise((resolve, reject) => {
     reject("eroareeee");
   }
 });
-console.log("Before call");
+console.log("Before call", p);
 
 // this message wil be displayed last because it is a promise
 p.then((message) => {
