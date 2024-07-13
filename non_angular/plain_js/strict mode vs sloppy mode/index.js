@@ -1,8 +1,18 @@
-//  'use strict';
+ 'use strict';
 var aa_1 = "VAR"
 let aa_2 = "LET"
 const aa_3 = "CONST"
 console.log(window)
+
+// hoisting is not affected by strict mode
+console.log("Hoisting", hoistingVar)
+var hoistingVar = "Hoisting var"
+//!!!!!!
+// in strict mode functions are block scope. 
+// If a function is declared inside block it can not be accessale from outside the bloc
+// in sloppy mode is function scope . 
+// If a function is declared inside block it can  be accessale from outside the bloc
+
 // in strict mode duplicate parameters is not allowd
 // function myF(a,a) {
 //   console.log("--", a);
