@@ -24,7 +24,7 @@ export class MainLayoutComponent implements OnInit {
     { name: 'arrays', url: '/arays' },
     { name: 'view-child', url: '/view-child' },
     { name: 'other-css', url: 'other-css' },
-    { name: 'sss', url: 'asdf' },
+    { name: 'ng-if', url: 'ng/if' },
     { name: 'sss', url: 'asdf' },
     { name: 'sss', url: 'asdf' },
     { name: 'sss', url: 'asdf' },

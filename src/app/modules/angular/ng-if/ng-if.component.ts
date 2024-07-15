@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +9,25 @@ import { Component, OnInit } from '@angular/core';
 export class NgIfComponent implements OnInit {
   condtion: boolean = false;
 
-  constructor() {}
+  data: any;
+  data2: any[];
+  data$: any;
 
-  ngOnInit(): void {}
+  constructor(private httpClient: HttpClient) {}
+
+  ngOnInit(): void {
+    this.httpClient
+      .get('https://jsonplaceholder.typicode.com/todos')
+      .subscribe({
+        next: (res) => {
+          this.data = res;
+          console.log(this.data);
+        },
+      });
+
+      // other way to get data from template using asing pipe
+      this.data$ = this.httpClient
+      .get('https://jsonplaceholder.typicode.com/todos')
+
+  }
 }

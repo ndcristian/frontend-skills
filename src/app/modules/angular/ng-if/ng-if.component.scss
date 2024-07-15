@@ -4,3 +4,9 @@
     margin: 5px;
     border: 1px solid grey;
 }
+
+.columns {
+    display : flex;
+    overflow: scroll;
+    height: 90%;
+}

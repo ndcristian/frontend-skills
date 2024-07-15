@@ -3,3 +3,13 @@
     <div  class="defaultDivCss" [ngStyle]="{'color':'green'}">Div 2 </div>
 </ng-template>
 
+
+
+<div class="columns" >
+    <div>
+        <div *ngFor="let d of (data$ | async)">{{d.title}}</div>
+    </div>
+    <div *ngIf="data$ | async as data3">
+        <div *ngFor="let d2 of $any(data3)">*{{d2.title}}</div>
+    </div>
+</div>

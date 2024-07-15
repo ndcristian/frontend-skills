@@ -121,6 +121,10 @@ const routes: Routes = [
         path:'view-child',
         component:ViewChildComponent
       },
+      {
+        path:'ng/if',
+        component:NgIfComponent
+      },
     ]
   },
   {
@@ -142,10 +146,6 @@ const routes: Routes = [
   {
     path:'ng/ngstyle',
     component:NgStyleComponent
-  },
-  {
-    path:'ng/if',
-    component:NgIfComponent
   },
   {
     path:'ng/container',
