@@ -59,6 +59,7 @@ import { FormTemplateComponent } from './modules/angular/form-template/form-temp
 import { FormReactiveComponent } from './modules/angular/form-reactive/form-reactive.component';
 import { PasswordStrengthDirective } from './modules/angular/directives/passord-strength.directive';
 import { OtherCssPropsComponent } from './modules/css/other-css-props/other-css-props.component';
+import { CustomServiceComponent } from './modules/angular/custom-service/custom-service.component';
 
 @NgModule({
   declarations: [
@@ -114,7 +115,8 @@ import { OtherCssPropsComponent } from './modules/css/other-css-props/other-css-
     FormTemplateComponent,
     FormReactiveComponent,
     PasswordStrengthDirective,
-    OtherCssPropsComponent
+    OtherCssPropsComponent,
+    CustomServiceComponent
   ],
   imports: [
     BrowserModule,

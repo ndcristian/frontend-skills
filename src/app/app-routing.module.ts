@@ -125,6 +125,10 @@ const routes: Routes = [
         path:'ng/if',
         component:NgIfComponent
       },
+      {
+        path:'types',
+        component:SpecificTypesComponent
+      },
     ]
   },
   {

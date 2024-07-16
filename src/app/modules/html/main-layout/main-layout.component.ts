@@ -25,7 +25,7 @@ export class MainLayoutComponent implements OnInit {
     { name: 'view-child', url: '/view-child' },
     { name: 'other-css', url: 'other-css' },
     { name: 'ng-if', url: 'ng/if' },
-    { name: 'sss', url: 'asdf' },
+    { name: 'types', url: 'types' },
     { name: 'sss', url: 'asdf' },
     { name: 'sss', url: 'asdf' },
   ];
