@@ -27,38 +27,38 @@ type TAdmin = {
   role: string;
 };
 
-type QuesryOptions =
+type QueryOptions =
   | {
-      table: string;
+      table: 'user';
       userId: string;
     }
   | {
-      table: string;
-      widgetsId: string;
+      table: 'sales';
+      salesId: string;
     }
   | {
-      table: string;
+      table: 'session';
       sessionId: string;
     };
 
 type T1 =
-   {
-    name: string;
-    age: number;
-    car: string;
-    fuel:string
+  | {
+      name: string;
+      age: number;
+      car: string;
+      fuel: string;
     }
   | {
-    name: string;
-    age: number;
-    bus: string;
-    places:number
+      name: string;
+      age: number;
+      bus: string;
+      places: number;
     }
   | {
-    name: string;
-    age: number;
-    bike: string;
-    speed:number
+      name: string;
+      age: number;
+      bike: string;
+      speed: number;
     };
 
 type T2 = {
@@ -96,20 +96,25 @@ export class SpecificTypesComponent implements OnInit {
   //Union-Typ
   normalUser: TUser | TAdmin;
 
-  options: QuesryOptions = { table: 'sssss', userId: 'e' };
+  options: QueryOptions = { table: 'sales', salesId: 'e' };
 
-  union_t1: T1 = {age:3, name:"sadf", bus:"ssss", places:3};
+  union_t1: T1 = { age: 3, name: 'sadf', bus: 'ssss', places: 3 };
 
   // could be one or another
-  union_t2_3: T2 | T3 = {firstName:"sss", age:4, bus:"ss"}
+  union_t2_3: T2 | T3 = { firstName: 'sss', age: 4, bus: 'ss' };
 
   // have all props
-  intersection: T2 & T3 = {firstName:"assa", LastName:"ssss", age:4, car:"444", bus:"sssss"}
+  intersection: T2 & T3 = {
+    firstName: 'assa',
+    LastName: 'ssss',
+    age: 4,
+    car: '444',
+    bus: 'sssss',
+  };
   constructor() {}
 
   ngOnInit(): void {
-
-    console.log("***",  this.union_t2_3)
+    console.log('***', this.union_t2_3);
 
     console.log(Role.ADMIN);
     console.log(Role2.ADMIN);
@@ -130,6 +135,20 @@ export class SpecificTypesComponent implements OnInit {
     this.age = 2;
     this.age = 's';
     const oth = new OtrherUser();
+  }
+
+  checkTable(options: QueryOptions): string | never{
+    switch (options.table) {
+      case 'sales':
+        return options.salesId;
+      case 'session':
+        return options.sessionId;
+      // case 'user':
+      //   return options.userId;
+      default:
+        let s: never
+        return s
+    }
   }
 }
 // a class can implements a type as well as an interface
