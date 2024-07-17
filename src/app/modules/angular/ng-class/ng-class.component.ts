@@ -1,3 +1,5 @@
+/// <reference path="../../../model/login-model.ts" />
+
 import { Component, OnInit } from '@angular/core';
 
 
