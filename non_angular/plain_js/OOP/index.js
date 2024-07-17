@@ -41,7 +41,7 @@ Person.prototype.calcAge = function () {
   console.log(2037 - this.birthYear);
 };
 console.log(Person.prototype);
-// All obects created with Person constructor will get access to calcAge through PROTOTYPE INHERITANCE
+// All objects created with Person constructor will get access to calcAge through PROTOTYPE INHERITANCE
 matilda.calcAge();
 
 // add properties to prototype
@@ -61,6 +61,8 @@ console.dir(jack); // is very util when to display object
 // Ex when use quesrySelector and return the html code you can use console.dir to display the as object
 console.dir((x) => (x = 1));
 console.log(jack);
+
+
 
 /****************************************************** */
 /*********ES6 Classes**************** */
@@ -88,7 +90,7 @@ class PersonES6 {
     return "Craiova";
   }
 
-  // this methoid is called every time sirstName is changed. Don't need to call it from code
+  // this methoid is called every time firstName is changed. Don't need to call it from code
   // this is the reason we introduced _firstName otherwise error: Maximum call stack size exceeded
   set firstName(name) {
     console.log(name);
