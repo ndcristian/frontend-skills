@@ -26,7 +26,22 @@ const secureBooking = function () {
   
   console.dir(booker);
   
+  //OR this one
   
+function secureBooking2() {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+}
+
+secureBooking2()();//1 passengers
+secureBooking2()();//2 passengers
+secureBooking2()();//3 passengers
+
+
   ///////////////////////////////////////
   // More Closure Examples
   // Example 1
@@ -65,8 +80,11 @@ const secureBooking = function () {
     }, wait * 1000);
   
     console.log(`Will start boarding in ${wait} seconds`);
+    
   };
   
   const perGroup = 1000;
   boardPassengers(180, 3);
   
+
+
