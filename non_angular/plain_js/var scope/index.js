@@ -15,7 +15,9 @@ if (true) {
 const isProgramer = true;
 
 function printAge(age) {
-  var aa_function = "function";
+  // VAR is function scope
+  var aa_function = "function"; 
+  console.log(this)// window object in sloopy mode , undefined in strict mode 
   if (true) {
     const firstName = " Saly";
     var aa_var_4 = "FUNCTION Block";
@@ -24,12 +26,20 @@ function printAge(age) {
   }
   console.log("works only in strict mode");
   console.log(aa_var_4); // it works fine because VAR is function scope
+  const arr = ()=>{
+    console.log("ARROW1:::",this) // window object in sloopy mode , undefined in strict mode
+  }
+  arr()
 }
 
+const arr = ()=>{
+  console.log("ARROW2:::",this)
+}
+arr()
 // debugger;
 printAge(11);
 //console.log(aa_var_4) // throw error because is not defined
-// console.log(aa_function) // error
+//console.log("aa_function",aa_function) // error
 console.log(window);
 console.log(aa_var_1, aa_var_2, aa_var_3);
 

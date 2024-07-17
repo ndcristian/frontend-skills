@@ -1,5 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 
+// function type
+type AddFn = (a: number, b: number) => number;
+
+let myFn: AddFn;
+
+myFn = (a: number, b: number) => {
+  return a + b;
+};
+
+// Now the same but using interface
+interface IAddFn {
+  (a: number, b: number): number;
+}
+
+let imyFn: IAddFn;
+imyFn = (a: number, b: number) => {
+  return a + b;
+};
+
 enum Role {
   ROOT,
   ADMIN,
@@ -17,6 +36,22 @@ enum Role3 {
 }
 
 type Combinable = string | number;
+
+// can add methode to types
+type X = {
+  prop1: string;
+  calc: AddFn;
+};
+
+let z: X;
+z = {
+  prop1: '',
+  calc: (a: number, b: number) => {
+    return a;
+  },
+};
+
+console.log(z.calc(4, 4));
 
 type TUser = {
   name: string;
@@ -135,9 +170,35 @@ export class SpecificTypesComponent implements OnInit {
     this.age = 2;
     this.age = 's';
     const oth = new OtrherUser();
+
+
+
+    type A = {
+      name: string;
+      role: string;
+    };
+    
+    type B = {
+      first: string;
+      last: string;
+      role: string
+    };
+    
+    type C = A|B;
+    
+    function test(value: C){
+      if('name' in value){
+        console.log(value.name)
+      }
+      if(value.hasOwnProperty("name")){
+        // console.log(value.name) //error
+      }
+    
+    }
+
   }
 
-  checkTable(options: QueryOptions): string | never{
+  checkTable(options: QueryOptions): string | never {
     switch (options.table) {
       case 'sales':
         return options.salesId;
@@ -146,8 +207,8 @@ export class SpecificTypesComponent implements OnInit {
       // case 'user':
       //   return options.userId;
       default:
-        let s: never
-        return s
+        let s: never;
+        return s;
     }
   }
 }
@@ -157,3 +218,7 @@ class OtrherUser implements TUser {
   age: number;
   private right: string;
 }
+
+
+
+

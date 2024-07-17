@@ -31,31 +31,32 @@ new Person("John", 1999);
 
 const matilda = new Person("Matilda", 8888);
 const jack = new Person("Jack", 8888);
-console.log(matilda, jack);
+console.log("C-F",matilda, jack);
 console.log(jack instanceof Person);
 
 /** PROTOTYPES */
 
 // add method to ower Person
 Person.prototype.calcAge = function () {
-  console.log(2037 - this.birthYear);
+  console.log("CalcAge:::",2037 - this.birthYear);
 };
 console.log(Person.prototype);
 // All objects created with Person constructor will get access to calcAge through PROTOTYPE INHERITANCE
 matilda.calcAge();
+jack.calcAge();
 
 // add properties to prototype
 Person.prototype.species = "Homo Sapience";
 console.log(matilda.species);
 console.log(matilda.hasOwnProperty("firstName")); // true
-console.log(matilda.hasOwnProperty("species")); // false because is inherited prom prototype
+console.log(matilda.hasOwnProperty("species")); // false because is inherited from prototype
 Person.prototype.calcAge();
 
 // PROTOTYPE CHAIN
 
-console.log(jack.__proto__); // jack prototype
-console.log(jack.__proto__.__proto__); // Object prototype
-console.log(jack.__proto__.__proto__.__proto__); // null
+console.log("CHAIN-1:::",jack.__proto__); // jack prototype
+console.log("CHAIN-2:::",jack.__proto__.__proto__); // Object prototype
+console.log("CHAIN-3:::",jack.__proto__.__proto__.__proto__); // null
 
 console.dir(jack); // is very util when to display object
 // Ex when use quesrySelector and return the html code you can use console.dir to display the as object
@@ -209,7 +210,8 @@ class StudentCl extends PersonG {
 
 const martha = new StudentCl("Martha", 500, "English");
 const mihai = new PersonG("Mihai", 800, "Geo")
-console.log(martha);
+console.log("Marta:::",martha);
+console.log("Mihai:::",mihai);
 
 martha.calcAge();
 mihai.calcAge();
@@ -217,3 +219,7 @@ mihai.calcAge();
 console.log(navigator.language);
 // throws error
 // console.log(mihai.#privateKey);
+
+PersonG.prototype.fullName = "asdfasdf"
+// mihai.fullName = "wertwert"
+console.log(mihai.__proto__)

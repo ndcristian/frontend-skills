@@ -48,7 +48,6 @@ import { IconComponent } from './libs/icon/icon.component';
 import { ProgressBarComponent } from './libs/progress-bar/progress-bar.component';
 import { ThreeDotsMenuComponent } from './libs/three-dots-menu/three-dots-menu.component';
 import { LetVarComponent } from './modules/java-script/let-var/let-var.component';
-import { StructuresOperatorsComponent } from './modules/java-script/structures-operators/structures-operators.component';
 import { ViewLayoutComponent } from './libs/view-layout/view-layout.component';
 import { CoursesComponent } from './modules/angular/directives/structural-directive/courses/courses.component';
 import { CourseCardComponent } from './modules/angular/directives/structural-directive/course-card/course-card.component';
@@ -105,7 +104,6 @@ import { CustomServiceComponent } from './modules/angular/custom-service/custom-
     EventHendlerComponent,
     ThreeDotsMenuComponent,
     LetVarComponent,
-    StructuresOperatorsComponent,
     ViewLayoutComponent,
     CoursesComponent,
     CourseCardComponent,
@@ -116,7 +114,7 @@ import { CustomServiceComponent } from './modules/angular/custom-service/custom-
     FormReactiveComponent,
     PasswordStrengthDirective,
     OtherCssPropsComponent,
-    CustomServiceComponent
+    CustomServiceComponent,
   ],
   imports: [
     BrowserModule,
