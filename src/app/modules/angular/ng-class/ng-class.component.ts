@@ -13,6 +13,9 @@ export class NgClassComponent implements OnInit {
 
   condition : string = "text"
 
+  // use case of Namespace
+  user: LoginNamespace.IUserModel
+
   ngOnInit(): void {
   }
 
