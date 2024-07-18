@@ -23,7 +23,7 @@ export class ObservableComponent implements OnInit {
     }
 
     // !!!! it only receive the data
-    // !!! Observable are unicast that means each subscriber receive the data only when it call subscribe() method 
+    // !!! Observable are unicast that means each subscriber receive the data only when it call subscribe() method
     // which means that they can receive different values depending the time when they subscribe
     const observable$ = new Observable<{
       name: string;
@@ -58,7 +58,6 @@ export class ObservableComponent implements OnInit {
 
     // BehaviorSubject = keep the last emited value. It will emit the last value even you subscribe after event was emited
     // ReplaySubject(x) = keeps tha last x emited values , so it will always emit last x valus
-
 
     // expected: --Observable is executed is displaied in console.
     // observable$.subscribe();
@@ -97,5 +96,45 @@ export class ObservableComponent implements OnInit {
     // in this case the callback function acts as the next function from the previus object
     // this is the shortest way and easy to read
     // observable$.subscribe((value) => console.log(value));
+
+
+    //!!! this proves that Observable is executed when someone subscribe to it. otherwise nothing happens
+    // this is tha main difference between Observable and Promis 
+    // The Promis start execution from the moment it is created
+    let o1 = new Observable<string>((subscriber) => {
+      setInterval(() => {
+        console.log('******', new Date().getSeconds());
+        subscriber.next(`P3 second is: ${new Date().getSeconds()}`);
+      }, 1000);
+    });
+
+    o1.subscribe({
+      next: (message) => {
+        console.log(`Subscriber-1 message is:`);
+        console.log(message);
+      },
+      error: (error) => {
+        console.log(error);
+      },
+      complete: ()=>{
+        console.log(`Completed`);
+      }
+    });
+
+    setTimeout(()=>{
+      o1.subscribe({
+        next: (message) => {
+          console.log(`Subscriber-2 message is:`);
+          console.log(message);
+        },
+        error: (error) => {
+          console.log(error);
+        },
+        complete: ()=>{
+          console.log(`Completed`);
+        }
+      });
+    }, 1500)
+
   }
 }

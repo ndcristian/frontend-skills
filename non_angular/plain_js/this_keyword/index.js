@@ -4,7 +4,7 @@
  * ARROW functions does not have own THIS and does not have the arguments object
  * 
  */
-
+console.log(navigator)
 console.log("***START****", this);
 
 let person = {
@@ -44,6 +44,8 @@ function testThis() {
   };
   arr();
 }
+
+testThis();
 
 function whoStrict() {
   "use strict";

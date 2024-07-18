@@ -211,6 +211,12 @@ export class SpecificTypesComponent implements OnInit {
         return s;
     }
   }
+
+  // !!!! adding _ to the variable tells TS that I am aware that I don't use it
+  unusedParameter(_message:string){
+    console.log("unused parameter")
+  }
+
 }
 // a class can implements a type as well as an interface
 class OtrherUser implements TUser {
