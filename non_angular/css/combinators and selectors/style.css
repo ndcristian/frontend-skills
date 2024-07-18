@@ -7,14 +7,13 @@ body div p {
   }
   /* also works like this */
   i {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
   }
 }
 
-/* takes all <p> from .div-1 class */
+/* takes all <p> from .div-1 class which are directs children */
 .div-1 > p {
   color: rgb(255, 0, 34);
-
 }
 /* takes  the 2-th from .div-2 .div-subtitle */
 .div-2 .div-subtitle :nth-child(5) {
@@ -27,15 +26,71 @@ body div p {
 }
 /* takes all the <a> elements that are immediately preceded by <span>  */
 span + a {
-  color: orange;
+  color: green;
   text-decoration: underline;
 }
 
 .div-2 span ~ a {
-    color: red;
-    text-decoration: underline;
-  }
+  color: red;
+  text-decoration: underline;
+}
 
 .div {
   height: auto;
 }
+
+.div5 {
+  * {
+    font-style: italic;
+  }
+  p {
+    color: red;
+  }
+  .myClass {
+    text-decoration: underline;
+  }
+  #myId {
+    /* font-family: monospace; */
+    color: blue;
+  }
+  p.myClass#myId {
+    font-size: 1.5rem;
+  }
+
+  p .myClass {
+    color: green
+  }
+}
+
+
+.div6 {
+  border: 1px solid grey;
+  h2 {
+    & + p {
+      & ~ p {
+        font-style: italic;
+        color: blue
+      }
+      & + p {
+        color: red;
+      }
+    }
+  }
+  .myClass {
+    & + p {
+      text-decoration: underline;
+    }
+  }
+  #myId {
+    & > .myClass {
+      outline: 3px dashed red;
+    }
+  }
+  * {
+    & > p {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+

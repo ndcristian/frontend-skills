@@ -56,48 +56,30 @@
           <p>This is footer content</p>
         </div>
       </div>
-      <div class="div div-3">
-        <p class="div-title">Div3</p>
-        <p class="div-subtitle">
-          <span class="sub-1">Sub</span>
-          <span class="sub-2">Sub</span>
-          <span class="sub-3">Sub</span>
-        </p>
-        <article class="article-1">
-          Cortona is a small charming town in the Valdichiana, or Chiana Valley,
-          in the province of Arezzo in southern Tuscany. The city, enclosed by
-          stone walls dating back to Etruscan and Roman times, sits on the top
-          of a hill about 600 meters (about 1968 feet) above sea level. This
-          dominant position over the valley offers a spectacular view from all
-          over the town of the surrounding valley and even Lake Trasimeno.
-        </article>
-        <div class="article-footer">
-          <p>This is footer content</p>
-          <p>This is footer content</p>
-          <p>This is footer content</p>
-        </div>
+       <div class="div5">
+        <p class="myClass" id="myId">I match everything.</p>
+        <p class="myClass" id="myId1">I match everything. <a class="myClass">WWW</a></p>
+        <p>I match the universal and type selectors only.</p>
       </div>
-      <div class="div div-4">
-        <p class="div-title">Div4</p>
-        <p class="div-subtitle">
-          <span class="sub-1">Sub</span>
-          <span class="sub-2">Sub</span>
-          <span class="sub-3">Sub</span>
+
+      <div class="div6">
+        <h2 class="myClass" id="myId">
+          No selectors match. <span class="myClass">This span has an outline</span> as
+          it is both myClass and a child of #myId.
+        </h2>
+        <p>The first paragraph is underlined. All the paragraphs are 1.1rem.</p>
+        <p>
+          The second paragraph is red. This and the following paragraphs are italic.
         </p>
-        <article class="article-1">
-          Cortona is a small charming town in the Valdichiana, or Chiana Valley,
-          in the province of Arezzo in southern Tuscany. The city, enclosed by
-          stone walls dating back to Etruscan and Roman times, sits on the top
-          of a hill about 600 meters (about 1968 feet) above sea level. This
-          dominant position over the valley offers a spectacular view from all
-          over the town of the surrounding valley and even Lake Trasimeno.
-        </article>
-        <div class="article-footer">
-          <p>This is footer content</p>
-          <p>This is footer content</p>
-          <p>This is footer content</p>
-        </div>
+        <p id="data">The third paragraph is NOT red. It is italic and 1.1rem.</p>
+        <p class="myClass">
+          Does not have an outline; this is a sibling of H2, not a child. It is italic
+          and 1.1rem.
+        </p>
       </div>
+
+
     </div>
+
   </body>
 </html>
