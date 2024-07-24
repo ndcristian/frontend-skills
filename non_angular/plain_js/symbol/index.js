@@ -4,6 +4,7 @@
 // they are different values. The description is just a label that doesn’t affect anything
 
 let id = Symbol("id");
+
 let user = {
   name: "John",
   age: 30,
