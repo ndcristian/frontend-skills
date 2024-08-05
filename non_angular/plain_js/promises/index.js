@@ -55,11 +55,13 @@ let p3 = new Promise((resolve, reject) => {
 //first use
 p3.then((response) => {
   console.log(`first use: ${response}`);
-}).catch((err) => {
-  console.log(`Catch ${err}`);
-}).finally((f)=>{
-console.log("Finaly")
-});
+})
+  .catch((err) => {
+    console.log(`Catch ${err}`);
+  })
+  .finally((f) => {
+    console.log("Finaly");
+  });
 // second use: and the result is the same as the first use even the second is 5 greater than first use
 setTimeout(() => {
   p3.then((response) => {
