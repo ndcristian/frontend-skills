@@ -1,0 +1,35 @@
+stages:
+  -  build
+
+variables:
+  MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode --errors --fail-at-end"
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+before_script:
+  # - export PROJECT_DIR=/myapp/myproject
+  # - export DEPLOY_DIR=/mydeploy
+  - export MAVEN_HOME=/usr/share/maven
+  - export PATH=$MAVEN_HOME/bin:$PATH
+
+
+build:
+  stage: build
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "master" || $CI_COMMIT_REF_NAME == "dev"'
+  script:
+    - echo "Start prepare phase ...."
+    - dir
+    - echo "Start copying files ....."
+    - cp -a /var/www/ui/. src/main/resources/static
+    - echo "/var/www/ui/* directory copied to /src/main/resources/static/"
+    - echo "..........................................."
+    - echo "Start package phase ...."
+    - mvn package
+    - cp target/*.jar /var/www/api
+    - echo "JAR file copied to /var/www/api"
+    - who
+    - echo "$RA_SERVICE" |  sudo  -S  systemctl restart raiseawayserver.service
+    - echo "Service  raiseawayserver.service restarted"
+
+
+#

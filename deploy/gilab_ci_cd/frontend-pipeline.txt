@@ -1,0 +1,50 @@
+variables:
+  APP_DIRECTORY : "C:\\apache-tomcat-10.0.21\\webapps\\ra-b2b"
+
+stages:          # List of stages for jobs, and their order of execution
+  - build
+# -deploy
+
+before_script:
+  # - export PATH=/home/ubuntu/.nvm/versions/node/v10.16.3/bin/:$PATH
+  - export PATH=/run/user/1000/fnm_multishells/100574_1726210220709/bin/npm:$PATH
+  - export PATH=/home/testzf/.nvm/versions/node/v16.20.2/bin/node/:$PATH
+  - whoami
+  - pwd
+  - who
+  - echo ${PATH}
+  - ls -lh $(which npm)
+
+build-job:       # This job runs in the build stage, which runs first.
+  stage: build
+  rules:
+    # - if: '$CI_COMMIT_REF_NAME == "master" || $CI_COMMIT_REF_NAME == "b2b-master"'
+    - if: '$CI_COMMIT_REF_NAME == "dev-ui" || $CI_COMMIT_REF_NAME == "b2b-master" || $CI_COMMIT_REF_NAME == "master"'
+  image: node:lts
+
+  script:
+    - who
+    - dir
+    - npm --version
+    # - apt-get update -y
+    # - apt-get install -y nodejs
+    - npm install --verbose
+    - echo "$RA_SERVICE" |  sudo  -S npm install -g @angular/cli
+    - echo "$RA_SERVICE" |  sudo  -S npm install -g nx
+    - echo "$RA_SERVICE" |  sudo  -S npm install -g @ng-select/ng-select
+    - echo "$RA_SERVICE" |  sudo  -S rm -rf /var/www/ui/*
+    - nx build ra-b2b --verbose
+    - dir
+    - ls
+    - echo "$RA_SERVICE" |  sudo  -S cp -a dist/apps/ra-b2b/. /var/www/ui
+
+trigger-pipeline-multiproject:
+  stage: build
+  trigger:
+    project: raiseaway/raiseaway-backend
+
+**********info about trigger-project
+ trigger:    
+     project: <GroupName>/<Project Name>
+- this info are from git. if you navigate to the project where you want to trigger the pipeline , you will find this in url
+- check the png file
