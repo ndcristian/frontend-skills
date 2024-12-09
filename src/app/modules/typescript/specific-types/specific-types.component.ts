@@ -212,7 +212,7 @@ export class SpecificTypesComponent implements OnInit {
     }
   }
 
-  // !!!! adding _ to the variable tells TS that I am aware that I don't use it
+  // *#:)* adding _ to the variable tells TS that I am aware that I don't use it
   unusedParameter(_message:string){
     console.log("unused parameter")
   }
