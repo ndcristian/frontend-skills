@@ -1,0 +1,11 @@
+
+Angular dependency injection is Hierarhical which means that if we inject a service into a child component without declariang it , the Angular will look up 
+for the service declaration in the parent component and so on until the root component
+
+@Self() The self decorator will ensure that we are not getting any service from up the component tree.
+Ex: constructor(@Self private my-var: MyService)
+
+On the other hand, if we want to make sure that we do get an instance of a service from further up
+the application tree and.Not from the local component.We have the skip self decorator @SkipSelf().
+
+We can also declare a service as optional with @Optional() decorator
