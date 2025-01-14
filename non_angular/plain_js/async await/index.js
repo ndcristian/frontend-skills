@@ -15,7 +15,8 @@ async function asyncCall() {
 console.log("********************");
 asyncCall();
 console.log("********************");
-console.log(result); // undefined
+console.log(result); // undefined and it proves that the code is not blocked by the await keyword
+// ... snd that because await is happening inside async function
 setTimeout(() => {
   console.log(result); // OK
 }, 3000);

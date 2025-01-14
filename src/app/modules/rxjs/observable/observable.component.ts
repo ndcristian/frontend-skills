@@ -32,7 +32,7 @@ export class ObservableComponent implements OnInit {
     // !!! Observable are unicast that means each subscriber receive the data only when it call subscribe() method
     // which means that they can receive different values depending the time when they subscribe
     // it does not have emit() or next() method
-    // this code will be execited every time when subscribe() is called and the time and counter will be different for each run
+    // this code will be executed every time when subscribe() is called and the time and counter will be different for each run
     const observable$ = new Observable<{
       name: string;
       time: number;
@@ -40,6 +40,7 @@ export class ObservableComponent implements OnInit {
     }>((subscriber) => {
       console.log('--Observable is executed');
       this.counter++;
+      console.log('Counter is:', this.counter);
       subscriber.next({
         name: 'Alice',
         time: new Date().getMilliseconds(),
@@ -57,25 +58,42 @@ export class ObservableComponent implements OnInit {
       });
     });
 
+    console.log('*************************');
     // expected: --Observable is executed is displaied in console.
-    //
+    console.log('#1 subscribe()');
     observable$.subscribe();
 
     const observerO = {
       next: (value: any) => console.log('O:::', value),
     };
+
+    console.log('*************************');
+    console.log('#2 subscribe()');
     // observerO becames the subscriber in Observable definition and this is why it has to containes the next() method
     observable$.subscribe(observerO);
+
+    console.log('*************************');
+    console.log('#3 subscribe()');
     observable$.subscribe({
       next: (value) => {
         console.log('O+++', value);
       },
     });
+    console.log('*************************');
+    console.log('#4 subscribe()');
     observable$.subscribe((value) => {
       console.log('O---', value);
     });
 
     /** USING METHODE */
+
+    /*
+    observableMethode(value: string): Observable<string> {
+      return new Observable<string>((subscriber) => {
+      subscriber.next(value);
+      });
+    }
+    */
 
     const $obsAsValue = this.observableMethode('Methode-value');
     $obsAsValue.subscribe((v) => {
@@ -99,17 +117,23 @@ export class ObservableComponent implements OnInit {
       order: number;
     }>();
 
-    const observerS = {
-      next: (value: any) => console.log('S:::', value),
+    // we defined 2 different observers to see differernt console message
+    const observerS1 = {
+      next: (value: any) => console.log('S-1:::', value),
     };
+    const observerS2 = {
+      next: (value: any)=> console.log('S-2:::', value)
+    }
 
     // BehaviorSubject = keep the last emited value. It will emit the last value even you subscribe after event was emited
-    // ReplaySubject(x) = keeps tha last x emited values , so it will always emit last x valus
+    // ReplaySubject(x) = keeps the last x emited values , so it will always emit last x valus
 
-    // subscription must be called before subject next() method
-    // both subscribe() call wili display exactly the same result, even the miliconds are the same
-    $subject.subscribe(observerS);
-    $subject.subscribe(observerS);
+    // subscribe() must be called before subject next() method
+    // both subscribe() call will display exactly the same result, even the miliseconds are the same
+    $subject.subscribe(observerS1); //s1
+    $subject.subscribe(observerS2); //s2
+
+    // when next() method is called, both subscirbers (s1, s2) gets the same result
 
     $subject.next({
       name: 'Alice',
@@ -146,14 +170,16 @@ export class ObservableComponent implements OnInit {
       setInterval(() => {
         console.log('.....', new Date().getSeconds());
         // it will emits a different value every second
-        subscriber.next(`P3 second is: ${new Date().getSeconds()}`);
+        subscriber.next(`Emiter second is: ${new Date().getSeconds()}`);
       }, 1000);
     });
+
 
     // this prvoves that Observable is executed when subscribe() is called with the value of the call moment
     // o1.subscribe({
     //   next: (message) => {
-    //     console.log(`***Subscriber-1 message is:`, message);
+    //     console.log(`+++Subscriber second is: ${new Date().getSeconds()}:`);
+    //     console.log(message)
     //   },
     //   error: (error) => {
     //     console.log(error);
@@ -165,32 +191,36 @@ export class ObservableComponent implements OnInit {
 
     // to see the difference , comment out the above subscribe
     // this prvoves that Observable is executed when subscribe() is called with the value of the call moment
-    // setTimeout(()=>{
-    //   o1.subscribe({
-    //     next: (message) => {
-    //       console.log(`+++Subscriber-2 message is:`, message);
-    //     },
-    //     error: (error) => {
-    //       console.log(error);
-    //     },
-    //     complete: ()=>{
-    //       console.log(`Completed`);
-    //     }
-    //   });
-    // }, 1500)
+
+    setTimeout(()=>{
+      o1.subscribe({
+        next: (message) => {
+          console.log(`+++Subscriber time is: ${new Date().getSeconds()}:`);
+          console.log(message)
+        },
+        error: (error) => {
+          console.log(error);
+        },
+        complete: ()=>{
+          console.log(`Completed`);
+        }
+      });
+    }, 3000)
 
     // another example about Observable emitting values
 
-    let o2 = new Observable<string>((subscriber) => {
-      console.log('.....', new Date().getSeconds());
-      // it will emits a different value at every second
-      subscriber.next(`O2 second is: ${new Date().getSeconds()}`);
-    });
+    // let o2 = new Observable<string>((subscriber) => {
+    //   console.log('.....', new Date().getSeconds());
+    //   // it will emits a different value at every second
+    //   subscriber.next(`O2 second is: ${new Date().getSeconds()}`);
+    // });
 
-    setInterval(() => {
-      o2.subscribe({next:(second)=>{
-        console.log(`***Subscriber-O2 message is:`, second)
-      }})
-    }, 3000);
+    // setInterval(() => {
+    //   o2.subscribe({
+    //     next: (second) => {
+    //       console.log(`***Subscriber-O2 message is:`, second);
+    //     },
+    //   });
+    // }, 3000);
   }
 }

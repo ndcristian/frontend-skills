@@ -4,12 +4,12 @@
 //!!!! and this is the main difference between Promis an Observable
 // Observable is executed only if something subscribe to it
 
-let p = new Promise((resolve, reject) => {
+let p = new Promise((resolve1, reject1) => {
   let a = 1 + 1;
   if (a === 2) {
-    resolve("success");
+    resolve1("success");
   } else {
-    reject("Failed");
+    reject1("Failed");
   }
 });
 let p2 = new Promise((resolve, reject) => {
@@ -20,7 +20,7 @@ let p2 = new Promise((resolve, reject) => {
     reject("eroareeee");
   }
 });
-console.log("Before call", p);
+console.log("Before call", p2);
 
 // this message wil be displayed last because it is a promise
 p.then((message) => {
@@ -35,7 +35,7 @@ Promise.all([p, p2]).then((message) => {
   console.log(message);
 });
 Promise.race([p, p2]).then((message) => {
-  console.log("This is ALL message ");
+  console.log("This is RACE message ");
   console.log(message);
 });
 

@@ -171,31 +171,27 @@ export class SpecificTypesComponent implements OnInit {
     this.age = 's';
     const oth = new OtrherUser();
 
-
-
     type A = {
       name: string;
       role: string;
     };
-    
+
     type B = {
       first: string;
       last: string;
-      role: string
+      role: string;
     };
-    
-    type C = A|B;
-    
-    function test(value: C){
-      if('name' in value){
-        console.log(value.name)
+
+    type C = A | B;
+
+    function test(value: C) {
+      if ('name' in value) {
+        console.log(value.name);
       }
-      if(value.hasOwnProperty("name")){
+      if (value.hasOwnProperty('name')) {
         // console.log(value.name) //error
       }
-    
     }
-
   }
 
   checkTable(options: QueryOptions): string | never {
@@ -213,10 +209,9 @@ export class SpecificTypesComponent implements OnInit {
   }
 
   // *#:)* adding _ to the variable tells TS that I am aware that I don't use it
-  unusedParameter(_message:string){
-    console.log("unused parameter")
+  unusedParameter(_message: string) {
+    console.log('unused parameter');
   }
-
 }
 // a class can implements a type as well as an interface
 class OtrherUser implements TUser {
@@ -225,6 +220,37 @@ class OtrherUser implements TUser {
   private right: string;
 }
 
+// any vs unknown vs never
 
 
+let val: any = 1;
+// because of any type here we can perform any operations on it without compilation error
+val++;
+val.toUpperCase();
+val.map(val);
+val.foobar = 3;
+// tomorrow(val);
 
+// -- let define it as unknown and perform the same operations:
+
+let otherval: unknown = 1;
+// because of unknown typw here we can NOT perform any operations on it without compilation error
+// this force us to check the type before perform any operations
+
+if (typeof otherval === 'number') otherval++;
+
+if (typeof otherval === 'string') otherval.toUpperCase();
+
+if (Array.isArray(otherval)) otherval.map(val);
+
+if (
+  otherval &&
+  typeof otherval === 'object' &&
+  'foobar' in otherval &&
+  typeof otherval.foobar === 'number' &&
+  otherval.hasOwnProperty('foobar') 
+) {
+  otherval.foobar = 17;
+}
+
+if (otherval instanceof Date) otherval.getDay();
