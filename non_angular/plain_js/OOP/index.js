@@ -23,7 +23,7 @@ const Person = function (firstName, birthYear) {
 // is not necesary to call this first. It works even if you call it like in line 25
 new Person("John", 1999);
 
-// what that means?
+// what that means? What happens when cal new keyword
 // 1. New {} is created
 // 2. function is called and THIS={} and that is possible because we call the function with new keyword
 // 3. {} is linked to prototype, the __proto__ is added to {} and link it to Person.prototype
@@ -42,6 +42,7 @@ Person.prototype.calcAge = function () {
 };
 console.log(Person.prototype);
 // All objects created with Person constructor will get access to calcAge through PROTOTYPE INHERITANCE
+// that means if a method or property is not found in the object , the javascript will look for it in its prototype
 matilda.calcAge();
 jack.calcAge();
 
@@ -86,7 +87,7 @@ class PersonES6 {
     console.log(2037 - this.birthYear);
   }
   // GETTERS ans SETTERS
-  // they are mothods which set a property
+  // they are mothods which set a property  
   get location() {
     return "Craiova";
   }
@@ -158,7 +159,7 @@ const Student = function (firstName, birthYear, course) {
   // instead of repeting this line we can call like this for inheritance
   PersonIh.call(this, firstName, birthYear);
   // use call because we dont call the PersonIh with the new keyword which link this to the curent object
-  // so, we have ti define THIS manually using call()
+  // so, we have to define THIS manually using call()
   this.course = course;
 };
 

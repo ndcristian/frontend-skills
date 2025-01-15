@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+// dynamic key name definition
+let obj: {[k: string]: any} = {};
+
 // function type
 type AddFn = (a: number, b: number) => number;
 
@@ -250,7 +253,8 @@ if (
   typeof otherval.foobar === 'number' &&
   otherval.hasOwnProperty('foobar') 
 ) {
-  otherval.foobar = 17;
+
+  // otherval.foobar = 17;
 }
 
 if (otherval instanceof Date) otherval.getDay();
