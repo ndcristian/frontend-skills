@@ -1,0 +1,29 @@
+
+/* REM = root font size is a relative font size  */
+/* DO NOT USE px for font size, padding or margin. REM is the best practice */
+html {
+    /* uncomment this line to see tge difference */
+    /* thange the root font size for entire document */
+    /* font-size: 24px; */
+}
+
+.px-wrapper,
+.rem-wrapper {
+  display: flex;
+  column-gap: 20px;
+}
+
+.px-16 {
+  font-size: 16px;
+}
+.px-32 {
+  font-size: 32px;
+}
+.rem-1 {
+  font-size: 1rem;
+}
+
+.rem-2 {
+  font-size: 2rem;
+}
+/* try to change font size from browser settings */
