@@ -37,6 +37,7 @@ import { ShopViewComponent } from './modules/angular/directives/structural-direc
 import { InterfaceImplComponent } from './modules/typescript/interface-impl/interface-impl.component';
 import { FormTemplateComponent } from './modules/angular/form-template/form-template.component';
 import { OtherCssPropsComponent } from './modules/css/other-css-props/other-css-props.component';
+import { InjectableParentComponent } from './modules/angular/dependency-injection/injectable-parent/injectable-parent.component';
 
 
 const routes: Routes = [
@@ -201,6 +202,10 @@ const routes: Routes = [
   {
     path:'v',
     component:ViewLayoutComponent
+  },
+  {
+    path:'injectable',
+    component:InjectableParentComponent
   },
 
 ]

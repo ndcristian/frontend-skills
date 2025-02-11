@@ -59,6 +59,8 @@ import { FormReactiveComponent } from './modules/angular/form-reactive/form-reac
 import { PasswordStrengthDirective } from './modules/angular/directives/passord-strength.directive';
 import { OtherCssPropsComponent } from './modules/css/other-css-props/other-css-props.component';
 import { CustomServiceComponent } from './modules/angular/custom-service/custom-service.component';
+import { InjectableParentComponent } from './modules/angular/dependency-injection/injectable-parent/injectable-parent.component';
+import { InjectableChildComponent } from './modules/angular/dependency-injection/injectable-parent/injectable-child/injectable-child.component';
 
 @NgModule({
   declarations: [
@@ -115,6 +117,8 @@ import { CustomServiceComponent } from './modules/angular/custom-service/custom-
     PasswordStrengthDirective,
     OtherCssPropsComponent,
     CustomServiceComponent,
+    InjectableParentComponent,
+    InjectableChildComponent,
   ],
   imports: [
     BrowserModule,

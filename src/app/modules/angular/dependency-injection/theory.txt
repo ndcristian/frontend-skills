@@ -1,5 +1,6 @@
 
-Angular dependency injection is Hierarhical which means that if we inject a service into a child component without declariang it , the Angular will look up 
+Angular dependency injection is Hierarhical which means that if we inject a service into a child component 
+without declariang it in providers property, the Angular will look up 
 for the service declaration in the parent component and so on until the root component
 
 @Self() The self decorator will ensure that we are not getting any service from up the component tree.
@@ -9,3 +10,11 @@ On the other hand, if we want to make sure that we do get an instance of a servi
 the application tree and.Not from the local component.We have the skip self decorator @SkipSelf().
 
 We can also declare a service as optional with @Optional() decorator
+
+Declaring a service at the component level is usefull when we don't need a state for that service. That means we don't 
+keep a state = one or more  variables we want to be unique through out entire application
+
+BUT if we provide a service at the component level we have to keep in mind that if the component where service is injected
+is destroyed yhan the service instance is destroyed
+
+Service injection works in lazy way. it is loaded when is needed 

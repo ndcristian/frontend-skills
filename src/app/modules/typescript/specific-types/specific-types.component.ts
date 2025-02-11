@@ -228,10 +228,10 @@ class OtrherUser implements TUser {
 
 let val: any = 1;
 // because of any type here we can perform any operations on it without compilation error
-val++;
-val.toUpperCase();
-val.map(val);
-val.foobar = 3;
+// val++;
+// val.toUpperCase();
+// val.map(val);
+// val.foobar = 3;
 // tomorrow(val);
 
 // -- let define it as unknown and perform the same operations:
@@ -240,21 +240,21 @@ let otherval: unknown = 1;
 // because of unknown typw here we can NOT perform any operations on it without compilation error
 // this force us to check the type before perform any operations
 
-if (typeof otherval === 'number') otherval++;
+// if (typeof otherval === 'number') otherval++;
 
-if (typeof otherval === 'string') otherval.toUpperCase();
+// if (typeof otherval === 'string') otherval.toUpperCase();
 
-if (Array.isArray(otherval)) otherval.map(val);
+// if (Array.isArray(otherval)) otherval.map(val);
 
-if (
-  otherval &&
-  typeof otherval === 'object' &&
-  'foobar' in otherval &&
-  typeof otherval.foobar === 'number' &&
-  otherval.hasOwnProperty('foobar') 
-) {
+// if (
+//   otherval &&
+//   typeof otherval === 'object' &&
+//   'foobar' in otherval &&
+//   typeof otherval.foobar === 'number' &&
+//   otherval.hasOwnProperty('foobar') 
+// ) {
 
-  // otherval.foobar = 17;
-}
+//   // otherval.foobar = 17;
+// }
 
 if (otherval instanceof Date) otherval.getDay();
