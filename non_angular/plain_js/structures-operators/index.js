@@ -88,10 +88,19 @@
  /*Nullish operator ??
  Works with null and undefined NOT with 0 and ''
  */
+
+ /* 
+ The nullish coalescing (??) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined,
+  and otherwise returns its left-hand side operand.
+ */
+
  console.log(0 ?? 10);
  /* Returns 0  */
  console.log(undefined ?? 10);
  /* Returns 10  */
+
+ console.log(false ?? 10);
+ /* false  */
 
  /* Logical  assignment */
 
