@@ -5,14 +5,17 @@
 // Observable is executed only if something subscribe to it
 
 let p = new Promise((resolve1, reject1) => {
+  console.log("PROMIS P IS EXECUTED")
+  const second = new Date().getSeconds();
   let a = 1 + 1;
   if (a === 2) {
-    resolve1("success");
+    resolve1("success at: " + second);
   } else {
-    reject1("Failed");
+    reject1("Failed at: " + second);
   }
 });
 let p2 = new Promise((resolve, reject) => {
+  console.log("PROMIS P-2 IS EXECUTED")
   let a = 1 + 1;
   if (a === 2) {
     resolve("bineee");
@@ -22,17 +25,29 @@ let p2 = new Promise((resolve, reject) => {
 });
 console.log("Before call", p2);
 
-// this message wil be displayed last because it is a promise
+// this message will be displayed last because it is a promise
 p.then((message) => {
-  console.log("This is THEN message " + message);
+  console.log(message.toUpperCase())
+  console.log("This is first P message " + message);
 }).catch((message) => {
   console.log("This is CATCH message " + message);
 });
 console.log("After call");
 
+setTimeout(()=>{
+  p.then((message)=>{
+    console.log("5 secconds later P message" + message);
+  })
+},5000)
+/*Expect output: the second will be consoled as the first call
+-- proves that the promis is executed when it is created and return the same value over time
+-- whereas Observer is executed every time when subcribe() method is called and generate different results
+*/
+
 Promise.all([p, p2]).then((message) => {
   console.log("This is ALL message ");
   console.log(message);
+  /* Expected output: ['success', 'bineee'] */
 });
 Promise.race([p, p2]).then((message) => {
   console.log("This is RACE message ");
